@@ -4,9 +4,16 @@ description: Documentation technique
 remote_theme: just-the-docs/just-the-docs
 
 search_enabled: true
+color_scheme: dark
 
 aux_links:
   "Repository GitHub":
     - "https://github.com/lesariaristes/wiki-dev"
 
-color_scheme: dark
+# Lien "Éditer sur GitHub" en bas de page
+gh_edit_link: true
+gh_edit_link_text: "✎ Éditer sur GitHub ↗"
+gh_edit_repository: "https://github.com/lesariaristes/wiki-dev"
+gh_edit_branch: "main"
+gh_edit_source: docs
+gh_edit_view_mode: "edit"
