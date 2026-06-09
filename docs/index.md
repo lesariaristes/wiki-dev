@@ -1,4 +1,8 @@
-# Accueil
+---
+layout: page
+title: Accueil
+permalink: /
+---
 
 Bienvenue dans le wiki développeur.
 
