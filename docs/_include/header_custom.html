@@ -1,0 +1,46 @@
+<button id="theme-toggle" class="btn btn-outline fs-3" type="button">
+  Mode clair
+</button>
+
+<script>
+(function () {
+  const storageKey = "ariaristes-theme";
+  const defaultTheme = "dark";
+
+  function getCurrentTheme() {
+    return localStorage.getItem(storageKey) || defaultTheme;
+  }
+
+  function updateButton(theme) {
+    const button = document.getElementById("theme-toggle");
+    if (!button) return;
+
+    button.textContent = theme === "dark" ? "Mode clair" : "Mode sombre";
+    button.setAttribute(
+      "aria-label",
+      theme === "dark" ? "Passer en thème clair" : "Passer en thème sombre"
+    );
+  }
+
+  function applyTheme(theme) {
+    if (window.jtd && typeof window.jtd.setTheme === "function") {
+      window.jtd.setTheme(theme);
+    }
+
+    localStorage.setItem(storageKey, theme);
+    updateButton(theme);
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    applyTheme(getCurrentTheme());
+
+    const button = document.getElementById("theme-toggle");
+    if (!button) return;
+
+    button.addEventListener("click", function () {
+      const nextTheme = getCurrentTheme() === "dark" ? "light" : "dark";
+      applyTheme(nextTheme);
+    });
+  });
+})();
+</script>
