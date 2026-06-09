@@ -1,4 +1,12 @@
 title: Wiki dev — Les Ariaristes
-description: Documentation technique interne
-theme: minima
-markdown: kramdown
+description: Documentation technique
+
+remote_theme: just-the-docs/just-the-docs
+
+search_enabled: true
+
+aux_links:
+  "Repository GitHub":
+    - "https://github.com/lesariaristes/wiki-dev"
+
+color_scheme: light
