@@ -1,25 +1,43 @@
-<button id="theme-toggle" class="btn btn-outline fs-3" type="button">
-  Mode clair
-</button>
+<div class="theme-mode-switch" role="group" aria-label="Choix du thème">
+  <button
+    class="theme-mode-button"
+    type="button"
+    data-theme-choice="light"
+    aria-label="Thème clair"
+    title="Thème clair"
+  >
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <circle cx="12" cy="12" r="4"></circle>
+      <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+    </svg>
+  </button>
+
+  <button
+    class="theme-mode-button"
+    type="button"
+    data-theme-choice="dark"
+    aria-label="Thème sombre"
+    title="Thème sombre"
+  >
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3A7 7 0 0 0 21 12.79z"></path>
+    </svg>
+  </button>
+</div>
 
 <script>
 (function () {
   const storageKey = "ariaristes-theme";
   const defaultTheme = "dark";
 
-  function getCurrentTheme() {
+  function getTheme() {
     return localStorage.getItem(storageKey) || defaultTheme;
   }
 
-  function updateButton(theme) {
-    const button = document.getElementById("theme-toggle");
-    if (!button) return;
-
-    button.textContent = theme === "dark" ? "Mode clair" : "Mode sombre";
-    button.setAttribute(
-      "aria-label",
-      theme === "dark" ? "Passer en thème clair" : "Passer en thème sombre"
-    );
+  function setActiveButton(theme) {
+    document.querySelectorAll("[data-theme-choice]").forEach(function (button) {
+      button.classList.toggle("is-active", button.dataset.themeChoice === theme);
+    });
   }
 
   function applyTheme(theme) {
@@ -27,19 +45,18 @@
       window.jtd.setTheme(theme);
     }
 
+    document.documentElement.dataset.colorScheme = theme;
     localStorage.setItem(storageKey, theme);
-    updateButton(theme);
+    setActiveButton(theme);
   }
 
   document.addEventListener("DOMContentLoaded", function () {
-    applyTheme(getCurrentTheme());
+    applyTheme(getTheme());
 
-    const button = document.getElementById("theme-toggle");
-    if (!button) return;
-
-    button.addEventListener("click", function () {
-      const nextTheme = getCurrentTheme() === "dark" ? "light" : "dark";
-      applyTheme(nextTheme);
+    document.querySelectorAll("[data-theme-choice]").forEach(function (button) {
+      button.addEventListener("click", function () {
+        applyTheme(button.dataset.themeChoice);
+      });
     });
   });
 })();
