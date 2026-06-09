@@ -1,4 +1,4 @@
-# Wiki dev — Les Ariaristes
+# Accueil
 
 Bienvenue dans le wiki développeur.
 
