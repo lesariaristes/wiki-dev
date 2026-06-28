@@ -66,8 +66,3 @@ L'alliance diplomatique d'une ville ne remplace pas la citoyenneté des habitant
 Le coffre municipal est une fonctionnalité optionnelle contrôlée par le staff.
 
 Quand il est activé, le maire et le personnel autorisé peuvent déposer ou retirer des objets. Les opérations sont journalisées pour audit.
-
-## Commits liés
-
-- [f177da6](https://github.com/lesariaristes/plugin-modernuo-lesariaristes/commit/f177da6) — système municipal, élections, référendums et coffres.
-- [44e7567](https://github.com/lesariaristes/plugin-modernuo-lesariaristes/commit/44e7567) — génération des mairies, greffiers et coffres.
