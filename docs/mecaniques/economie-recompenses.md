@@ -70,8 +70,3 @@ Pistes prévues :
 - projets municipaux;
 - récompenses cosmétiques supplémentaires;
 - captures économiques ou diplomatiques.
-
-## Commits liés
-
-- [f177da6](https://github.com/lesariaristes/plugin-modernuo-lesariaristes/commit/f177da6) — points, marques, récompense cosmétique, villes et coffres.
-- [44e7567](https://github.com/lesariaristes/plugin-modernuo-lesariaristes/commit/44e7567) — institutions municipales générées.
