@@ -47,15 +47,6 @@ Fonctionnalités prévues ou envisagées :
 - profils LLM pour dialogues avec habitants et représentants;
 - wiki joueur plus narratif une fois les règles stabilisées.
 
-## Changelog associé
+## Changelog
 
-Le changelog public peut résumer les commits suivants :
-
-- [7858e8a](https://github.com/lesariaristes/plugin-modernuo-lesariaristes/commit/7858e8a) — monde vivant.
-- [50e80c0](https://github.com/lesariaristes/plugin-modernuo-lesariaristes/commit/50e80c0) — habitants persistants.
-- [2b5c46b](https://github.com/lesariaristes/plugin-modernuo-lesariaristes/commit/2b5c46b) — affiliations initiales.
-- [edf021f](https://github.com/lesariaristes/plugin-modernuo-lesariaristes/commit/edf021f) — menu admin Ariaristes.
-- [f177da6](https://github.com/lesariaristes/plugin-modernuo-lesariaristes/commit/f177da6) — système politique MVP.
-- [44e7567](https://github.com/lesariaristes/plugin-modernuo-lesariaristes/commit/44e7567) — institutions politiques générées.
-- [a4f3aa1](https://github.com/lesariaristes/plugin-modernuo-lesariaristes/commit/a4f3aa1) — documentation monde et contrats LLM.
-- [73f6096](https://github.com/lesariaristes/plugin-modernuo-lesariaristes/commit/73f6096) — documentation factions, villes et territoires.
+Le changelog public doit résumer les changements en langage joueur, sans dépendre des liens vers le dépôt plugin privé.
