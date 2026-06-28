@@ -45,9 +45,3 @@ Les spawns sont répartis par biomes et par fonction :
 - institutions politiques.
 
 Les règles de génération évitent les traitements globaux lourds au chargement du serveur.
-
-## Commits liés
-
-- [7858e8a](https://github.com/lesariaristes/plugin-modernuo-lesariaristes/commit/7858e8a) — génération du monde vivant Shattered Isles.
-- [50e80c0](https://github.com/lesariaristes/plugin-modernuo-lesariaristes/commit/50e80c0) — habitants persistants.
-- [44e7567](https://github.com/lesariaristes/plugin-modernuo-lesariaristes/commit/44e7567) — institutions politiques générées.
