@@ -79,8 +79,3 @@ Une capture abandonnée applique un cooldown d'échec avant une nouvelle tentati
 Les membres de factions différentes deviennent ennemis dans le rayon d'un point de contrôle activement contesté.
 
 Cette règle est volontairement locale afin de conserver un PvP modéré.
-
-## Commits liés
-
-- [f177da6](https://github.com/lesariaristes/plugin-modernuo-lesariaristes/commit/f177da6) — logique de capture, messages et persistance.
-- [44e7567](https://github.com/lesariaristes/plugin-modernuo-lesariaristes/commit/44e7567) — génération des points de contrôle.
