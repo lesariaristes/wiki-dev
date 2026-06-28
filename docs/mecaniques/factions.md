@@ -72,8 +72,3 @@ Quitter une faction n'est pas instantané. Le système prévoit :
 Les factions ne sont pas ennemies partout sur la carte.
 
 L'hostilité automatique est limitée aux points de contrôle activement contestés. Cela permet un PvP modéré et localisé sans transformer toute la map en zone de guerre.
-
-## Commits liés
-
-- [f177da6](https://github.com/lesariaristes/plugin-modernuo-lesariaristes/commit/f177da6) — système factions, villes et territoires.
-- [2b5c46b](https://github.com/lesariaristes/plugin-modernuo-lesariaristes/commit/2b5c46b) — affiliations Ariaristes initiales.
