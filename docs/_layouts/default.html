@@ -61,7 +61,7 @@ layout: table_wrappers
       gap: var(--la-content-gap) !important;
       width: 100% !important;
       max-width: 100% !important;
-      overflow-x: clip;
+      overflow: visible !important;
     }
 
     .la-page-layout--no-toc {
@@ -76,8 +76,14 @@ layout: table_wrappers
     }
 
     .la-page-toc {
+      align-self: start !important;
+      position: sticky !important;
+      top: 4.5rem !important;
       min-width: 0 !important;
       max-width: var(--la-page-toc-width) !important;
+      max-height: calc(100vh - 5.5rem) !important;
+      overflow-y: auto !important;
+      overflow-x: hidden !important;
     }
   }
 </style>
