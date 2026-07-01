@@ -50,6 +50,7 @@ Le serveur ne doit pas être uniquement un monde statique à parcourir, ni un se
 - rencontrent des situations dynamiques qui donnent vie au monde entre deux expéditions ;
 - ramènent ressources, reliques, connaissances et récits ;
 - reconstruisent des lieux, des routes, des avant-postes et des colonies ;
+- développent des métiers utiles : artisanat, collecte, taming, commerce, exploration, érudition ;
 - interagissent avec des PNJ plus vivants grâce à des systèmes automatisés et, à terme, à des dialogues assistés par LLM ;
 - participent à une progression collective même lorsqu'ils ne jouent pas tous aux mêmes horaires ;
 - peuvent jouer seuls, en petit groupe ou en communauté sans dépendre en permanence d'un GM.
@@ -63,7 +64,8 @@ Le serveur ne doit pas être uniquement un monde statique à parcourir, ni un se
 | Référence | Positionnement perçu | Ce qu'il faut éviter | Ce qu'on peut retenir |
 |---|---|---|---|
 | UO Midlands FR | Monde dynamique, factions, PNJ, conquête, politique, guerres de territoires | Copier la guerre de factions, les armées NPC, la conquête de villes | Inspiration sur le monde vivant et les interactions systémiques |
-| Shards of Minax | UO très systémique, progression, loot, boss, pets, craft, builds, économie | Devenir un clone hack'n slash avec trop de caps, trop de loot et trop de systèmes empilés | Expéditions, contrats, compagnons, boss mécaniques, outils admin, progression longue |
+| Shards of Minax / Maxxia | UO très systémique, progression, loot, boss, pets, craft, builds, économie | Devenir un clone hack'n slash avec trop de caps, trop de loot et trop de systèmes empilés | Expéditions, contrats, compagnons, boss mécaniques, outils admin, progression longue, taming avancé |
+| UO Alive | Monde vivant, QoL, pets, économie, confort de jeu | Copier des systèmes sans les relier à l'identité RP | S'inspirer du confort, de la boucle tamer et de la vie quotidienne |
 | Les Ariaristes | Exploration RP, survie douce, reconstruction, reliques, rumeurs, encounters dynamiques, zones temporaires, progression asynchrone | Diluer l'identité en voulant tout faire | Assumer une direction cohérente et jouable avec peu de staff |
 
 ---
@@ -94,7 +96,7 @@ Implications :
 - contenu petit groupe viable ;
 - contribution asynchrone ;
 - objectifs collectifs non bloqués par l'absence d'un joueur ;
-- compagnons de route limités pour aider les joueurs seuls ;
+- compagnons de route et pets utilitaires limités pour aider les joueurs seuls ;
 - encounters ouverts assez longtemps pour ne pas pénaliser les joueurs hors horaires de pointe ;
 - systèmes sociaux incitant à coopérer sans forcer une présence quotidienne.
 
@@ -124,6 +126,7 @@ Le serveur doit donc ajouter des couches dynamiques :
 - rumeurs évolutives ;
 - reliques à identifier ;
 - ressources rares cycliques ;
+- faune rare régionale ;
 - états régionaux ;
 - avant-postes et colonies évolutifs.
 
@@ -138,6 +141,7 @@ Exemples :
 - une relique identifiée peut débloquer une recette ;
 - une colonie aidée peut proposer un nouveau service ;
 - une région négligée peut devenir plus dangereuse ;
+- un animal rare peut signaler une découverte régionale ;
 - un joueur reconnu peut accéder à des outils sociaux limités.
 
 ### 3.6 Progression horizontale avant inflation verticale
@@ -153,7 +157,8 @@ Priorité à :
 - craft avancé ;
 - exploration plus sûre ;
 - réputation ;
-- lore et découvertes.
+- lore et découvertes ;
+- prestige visuel ou RP non destructeur d'équilibrage.
 
 À éviter en première intention :
 
@@ -162,6 +167,19 @@ Priorité à :
 - pets surpuissants ;
 - farm obligatoire ;
 - endgame uniquement basé sur le DPS.
+
+### 3.7 Confort de jeu au service du gameplay
+
+Certaines fonctionnalités de confort doivent être assumées comme prioritaires lorsqu'elles évitent de transformer le serveur en corvée.
+
+Exemples :
+
+- Storage Boxes pour les artisans et guildes ;
+- outils de tri pour BODs si le craft BOD devient important ;
+- registres de commandes pour éviter les échanges Discord permanents ;
+- locations urbaines pour donner un ancrage RP sans forcer le housing complet.
+
+Le confort est acceptable lorsqu'il soutient le RP, le craft, la reconstruction ou l'économie sociale. Il doit être limité lorsqu'il supprime toute friction utile, toute interaction ou toute immersion.
 
 ---
 
@@ -173,12 +191,12 @@ Objectif : permettre à un joueur de se connecter, faire quelque chose d'utile, 
 
 Déroulé type :
 
-1. Le joueur consulte le tableau de rumeurs ou de contrats.
+1. Le joueur consulte le tableau de rumeurs, de contrats ou de commandes.
 2. Il choisit une activité adaptée à son temps disponible.
-3. Il prépare son équipement, son compagnon ou ses outils.
-4. Il part explorer, récolter, escorter, enquêter ou combattre.
+3. Il prépare son équipement, son compagnon, son pet utilitaire ou ses outils.
+4. Il part explorer, récolter, escorter, enquêter, combattre ou livrer.
 5. Il peut tomber sur un encounter dynamique : voyageur en danger, ressource rare, faille mineure, épave, campement, menace locale.
-6. Il ramène une preuve, des ressources, une relique ou une information.
+6. Il ramène une preuve, des ressources, une relique, une commande ou une information.
 7. Il reçoit une récompense ou contribue à un objectif collectif.
 8. Une trace est ajoutée au monde : réputation, chronique, progression de colonie, nouvelle rumeur.
 
@@ -193,9 +211,10 @@ Déroulé type :
 3. Un ou plusieurs encounters dynamiques sont générés.
 4. Des joueurs enquêtent à différents moments.
 5. Des ressources spécifiques sont demandées.
-6. Une expédition temporaire peut être ouverte.
-7. Les joueurs ramènent des objets ou informations.
-8. La région évolue : menace réduite, avant-poste amélioré, nouvelle route ouverte, nouveau PNJ installé.
+6. Des commandes joueurs ou de colonie apparaissent.
+7. Une expédition temporaire peut être ouverte.
+8. Les joueurs ramènent des objets ou informations.
+9. La région évolue : menace réduite, avant-poste amélioré, nouvelle route ouverte, nouveau PNJ installé.
 
 ### 4.3 Boucle longue : progression sur plusieurs semaines
 
@@ -209,8 +228,10 @@ Déroulé type :
 4. Des expéditions liées à l'île apparaissent.
 5. Une colonie ou un avant-poste s'y développe.
 6. Des métiers deviennent utiles localement.
-7. Des secrets sont révélés progressivement.
-8. L'île devient un nouveau hub partiel, sans rendre les anciennes zones obsolètes.
+7. Une faune rare ou des créatures régionales sont découvertes.
+8. Des locations, ateliers ou échoppes donnent vie aux villes.
+9. Des secrets sont révélés progressivement.
+10. L'île devient un nouveau hub partiel, sans rendre les anciennes zones obsolètes.
 
 ---
 
@@ -231,6 +252,7 @@ Les îles principales constituent le squelette du monde. Elles doivent donner un
 - rumeurs propres à chaque île ;
 - encounters dynamiques locaux ;
 - ressources locales ;
+- faune régionale ;
 - dangers ou biomes distincts.
 
 #### Priorité
@@ -272,6 +294,7 @@ Ces zones peuvent être :
 - accès solo ou groupe ;
 - objectifs simples ;
 - ressources spécifiques ;
+- faune ou créature rare possible ;
 - boss ou rencontre finale optionnelle ;
 - journalisation des découvertes ;
 - disparition ou effondrement à expiration.
@@ -295,15 +318,6 @@ Ces zones peuvent être :
 - quelques objectifs simples ;
 - loot spécifique ;
 - pas encore de génération LLM directe.
-
-#### Version avancée
-
-- génération par templates ;
-- sélection de biome ;
-- instabilité locale ;
-- rumeurs générées ;
-- boss mécanique ;
-- conséquences sur colonie ou région.
 
 ---
 
@@ -338,6 +352,7 @@ Chaque île ou région possède un niveau d'instabilité. Ce niveau monte ou des
 - rumeurs inquiétantes ;
 - attaque de caravane ;
 - campement hostile ;
+- variation de faune rare ;
 - mini-boss régional ;
 - coût plus élevé des services locaux ;
 - PNJ qui quittent temporairement une zone.
@@ -345,13 +360,6 @@ Chaque île ou région possède un niveau d'instabilité. Ce niveau monte ou des
 #### Priorité
 
 **P1 - Très important, mais après les fondations.**
-
-#### MVP possible
-
-- jauge simple par région ;
-- seuils : stable, troublée, dangereuse, critique ;
-- déclenchement de spawns, rumeurs ou encounters à chaque seuil ;
-- décrue automatique lente.
 
 ---
 
@@ -398,13 +406,6 @@ Fournir au joueur une raison claire de se connecter et d'agir.
 
 **P0 - Fondamental.**
 
-#### MVP possible
-
-- tableau par ville ou île ;
-- missions générées par templates ;
-- rotation quotidienne ou hebdomadaire ;
-- récompense en or, ressources, réputation ou indice.
-
 ---
 
 ### 5.5 Reliques, objets inconnus et identification
@@ -441,12 +442,6 @@ Les joueurs trouvent des objets partiellement inconnus. Leur valeur réelle dép
 #### Priorité
 
 **P1 - Très fort pour l'identité.**
-
-#### MVP possible
-
-- quelques classes d'objets inconnus ;
-- identification par compétence ;
-- transformation en ressource, indice ou objet utilisable.
 
 ---
 
@@ -492,13 +487,6 @@ Les joueurs contribuent à améliorer des lieux du monde : campements, villages,
 
 **P1 - Important pour la boucle longue.**
 
-#### MVP possible
-
-- objectifs collectifs à paliers ;
-- ressources demandées ;
-- état visuel ou service débloqué à chaque palier ;
-- contribution individuelle tracée.
-
 ---
 
 ### 5.7 Housing, agriculture et vie civile
@@ -538,7 +526,7 @@ Le housing ne doit pas devenir uniquement décoratif. Il doit soutenir :
 
 ---
 
-### 5.8 Craft d'expédition et de reconstruction
+### 5.8 Craft d'expédition, de reconstruction et logistique
 
 #### Intention
 
@@ -580,9 +568,34 @@ Faire du craft un moteur de progression, pas seulement une usine à équipement.
 - transformation ;
 - extraction d'empreinte.
 
+#### Logistique et confort nécessaires
+
+Les systèmes de craft, reconstruction, agriculture, expéditions et reliques produisent beaucoup d'objets. Sans outils de stockage, les artisans passent trop de temps à trier au lieu de jouer.
+
+Fonctionnalités à retenir :
+
+- **Storage Boxes** : **P0 QoL**, stockage par type de ressource ou objet ;
+- **BOD Deed Box** : **P1/P2**, utile si le système BOD devient important ;
+- coffres d'atelier ;
+- stockage de ressources de reconstruction ;
+- outils de tri limités et compréhensibles.
+
+#### Catégories de Storage Boxes recommandées
+
+- minerais ;
+- bois ;
+- tissus/cuirs ;
+- plantes ;
+- ingrédients d'alchimie ;
+- composants de reliques ;
+- outils ;
+- cartes/fragments ;
+- ressources de reconstruction ;
+- ressources de cuisine/agriculture.
+
 #### Priorité
 
-**P1/P2 - À introduire progressivement.**
+**P1/P2 pour le craft avancé. P0 QoL pour les Storage Boxes de base.**
 
 ---
 
@@ -623,16 +636,123 @@ Chaque joueur peut recruter un compagnon principal limité.
 
 **P1/P2 - Très utile pour petite population.**
 
-#### Risques
+---
 
-- remplacer les joueurs ;
-- faciliter le farm solo ;
-- créer des bugs de contrôle/pets ;
-- surcharger le serveur.
+### 5.10 Faune rare, taming et pets évolutifs
+
+#### Intention
+
+Créer une boucle longue pour les tamers, chasseurs, druides, rôdeurs et explorateurs, sans transformer les pets en source principale de puissance.
+
+Les pets doivent être des **compagnons liés au monde**, pas seulement des armes plus efficaces.
+
+#### Positionnement
+
+Le serveur peut s'inspirer de systèmes avancés comme UO Alive ou Maxxia, mais ne doit pas copier leur logique de progression verticale massive.
+
+La direction recommandée :
+
+> Une faune rare, régionale et évolutive, liée aux îles, aux biomes, aux expéditions, à l'instabilité et aux découvertes.
+
+#### Ce qu'il faut privilégier
+
+- créatures rares par région ;
+- variantes de biome ;
+- spawns liés à des rumeurs ;
+- spawns liés à l'instabilité régionale ;
+- créatures trouvables dans certaines expéditions temporaires ;
+- indices de pistage ;
+- tempérament ou personnalité simple ;
+- progression lente et plafonnée ;
+- capacités utilitaires ;
+- cosmétique régional ;
+- prestige RP ;
+- lien avec certains métiers : pisteur, dresseur, herboriste, soigneur animalier.
+
+#### Ce qu'il faut éviter
+
+- pets surpuissants ;
+- tiers infinis ;
+- caps absurdes ;
+- pet obligatoire pour faire le contenu ;
+- tamer capable de tout faire mieux qu'un groupe ;
+- pets qui remplacent les joueurs ;
+- élevage ou reproduction qui casse la rareté ;
+- stockage de pets trop permissif dès le lancement.
+
+#### Rôles de pets intéressants
+
+Un pet évolué doit ouvrir des possibilités de jeu, pas seulement augmenter les dégâts.
+
+Rôles possibles :
+
+- pisteur de reliques ;
+- détecteur de passages ;
+- protecteur de campement ;
+- monture adaptée à un biome ;
+- compagnon de chasse ;
+- familier lié à une région ;
+- soutien léger en combat ;
+- aide à l'exploration ;
+- aide à certains encounters ;
+- marqueur de prestige RP.
+
+#### Exemples adaptés au serveur
+
+##### Cerf de Brume
+
+Créature rare liée aux zones forestières instables.
+
+Utilité :
+
+- détecte certains passages cachés ;
+- réduit légèrement le risque d'embuscade dans les expéditions forestières ;
+- faible intérêt en combat direct.
+
+##### Chien des Ruines
+
+Compagnon de piste lié aux anciennes cités détruites.
+
+Utilité :
+
+- suit des traces lors d'un encounter ;
+- aide à retrouver un PNJ disparu ;
+- peut signaler une cache ou une relique proche.
+
+##### Lézard de Cendre
+
+Créature de biome volcanique ou brûlé.
+
+Utilité :
+
+- meilleure résistance aux zones chaudes ;
+- aide à transporter de petites charges ;
+- peut détecter des minerais instables.
+
+##### Corbeau du Cartographe
+
+Familier rare associé aux explorateurs.
+
+Utilité :
+
+- peut revenir avec un indice mineur ;
+- facilite la lecture de certaines cartes ;
+- donne du prestige visuel et RP.
+
+#### Priorité
+
+| Sous-système | Priorité | Phase cible |
+|---|---:|---|
+| Créatures rares régionales | **P1 stratégique** | Alpha 2 / Beta |
+| Pistage et indices | **P1** | Alpha 2 / Beta |
+| Progression légère des pets | **P1/P2** | Beta |
+| Stable Sphere ou stockage avancé de pets | **P2** | Beta+ |
+| Pet cosmetics | **P2/P3** | Release+ |
+| Évolution verticale avancée | **À repousser / encadrer** | Pas avant équilibre global |
 
 ---
 
-### 5.10 PNJ dynamiques et LLM encadré
+### 5.11 PNJ dynamiques et LLM encadré
 
 #### Intention
 
@@ -678,7 +798,7 @@ Le LLM doit enrichir le texte, le contexte et le RP. Il ne doit pas décider lib
 
 ---
 
-### 5.11 Chroniques et mémoire du monde
+### 5.12 Chroniques et mémoire du monde
 
 #### Intention
 
@@ -700,24 +820,121 @@ Donner du poids aux actions joueurs et aider les joueurs asynchrones à suivre l
 
 **P1 - Très utile pour RP et asynchrone.**
 
-#### MVP possible
+---
 
-- journal automatique simple ;
-- entrée lors d'une expédition terminée ;
-- entrée lors d'un palier de reconstruction atteint ;
-- résumé manuel ou semi-automatique par staff.
+### 5.13 Vie urbaine, locations et marché RP
+
+#### Intention
+
+Peupler les villes et structurer le commerce sans casser l'immersion.
+
+#### City Rentals
+
+À intégrer en **P1 haute**.
+
+Usages RP :
+
+- chambre d'auberge ;
+- échoppe ;
+- atelier ;
+- bureau de guilde ;
+- cabinet d'érudit ;
+- comptoir marchand ;
+- salle commune ;
+- ambassade locale ;
+- entrepôt temporaire.
+
+Règles recommandées :
+
+- loyers raisonnables ;
+- durée configurable ;
+- expiration claire ;
+- stockage limité ;
+- pas d'avantage économique abusif ;
+- lieux visibles et utiles RP.
+
+#### Fulfillment Order System
+
+À intégrer en **P1 haute**.
+
+Concept : un joueur, une guilde, une colonie ou un atelier publie une commande de ressources, objets, nourriture, composants, outils ou matériaux de reconstruction.
+
+Intérêt RP :
+
+- crée des métiers : mineur, bûcheron, pêcheur, chasseur, herboriste, transporteur, fournisseur, artisan, marchand ;
+- soutient la reconstruction ;
+- facilite les interactions asynchrones ;
+- évite que tout passe par Discord.
+
+Règles recommandées :
+
+- commandes visibles localement ou régionalement ;
+- possibilité de commandes publiques de colonie ;
+- pas d'automatisation totale du marché ;
+- frais ou taxe légère ;
+- historique des commandes ;
+- limites anti-spam.
+
+#### Vendor Search / marché global
+
+À adapter en **P2**.
+
+Risque : un marché global avec achat distant instantané peut casser l'immersion et vider les villes de leur intérêt.
+
+Version recommandée :
+
+- registre marchand régional ;
+- courtier de marché ;
+- recherche par ville ;
+- frais de courtage ;
+- délai de livraison ;
+- achat distant limité ou réservé aux objets simples ;
+- consultation depuis les villes, pas depuis n'importe où.
 
 ---
 
-### 5.12 Outils d'animation joueur limités
+### 5.14 Campements d'expédition
+
+#### Intention
+
+Donner aux explorateurs une base temporaire adaptée aux expéditions, aux régions dangereuses et à la survie douce.
+
+#### Portable Campsite
+
+À intégrer en **P1**.
+
+Fonctionnalités possibles :
+
+- feu de camp ;
+- couchage ;
+- petit stockage temporaire ;
+- cuisine simple ;
+- réparation légère ;
+- bonus de repos ;
+- point de préparation ;
+- protection mineure contre certains dangers ;
+- durée limitée ;
+- démontage ou expiration.
+
+À éviter :
+
+- coffre permanent gratuit ;
+- recall abusif dès le lancement ;
+- campement impossible à attaquer ou contester ;
+- remplacement du housing ;
+- multiplication infinie de camps.
+
+#### Priorité
+
+**P1 - Très cohérent avec exploration, survie douce et expéditions.**
+
+---
+
+### 5.15 Outils d'animation joueur limités
 
 #### Intention
 
 Permettre à des joueurs investis d'enrichir le RP sans devenir GM.
-
-#### Principe
-
-Certains joueurs peuvent débloquer des outils sociaux et événementiels limités, sous conditions.
 
 #### Prérequis possibles
 
@@ -756,7 +973,7 @@ Certains joueurs peuvent débloquer des outils sociaux et événementiels limit�
 
 ---
 
-### 5.13 Politique légère et gouvernance locale
+### 5.16 Politique légère et gouvernance locale
 
 #### Intention
 
@@ -773,21 +990,13 @@ Permettre aux joueurs d'influencer le monde sans créer une usine à conflits ou
 - chartes de village ;
 - décisions temporaires.
 
-#### Exemples
-
-- construire un phare ou un atelier ;
-- sécuriser une route ou ouvrir un port ;
-- investir dans une ferme ou une palissade ;
-- accueillir un PNJ réfugié ou le refuser ;
-- prioriser l'exploration d'une île ou la défense d'une colonie.
-
 #### Priorité
 
 **P3 - Endgame social, pas MVP.**
 
 ---
 
-### 5.14 Combat, boss et PvE mémorable
+### 5.17 Combat, boss et PvE mémorable
 
 #### Intention
 
@@ -811,13 +1020,9 @@ Chaque boss ou mini-boss important doit avoir une mécanique lisible :
 
 **P1/P2 - Important pour l'aventure.**
 
-#### Règle
-
-Un boss mémorable vaut mieux que dix sacs de PV.
-
 ---
 
-### 5.15 Économie, marchés et contrats entre joueurs
+### 5.18 Économie, marchés et contrats entre joueurs
 
 #### Intention
 
@@ -837,11 +1042,11 @@ Favoriser les échanges sociaux sans imposer une économie complexe dès le dép
 
 #### Priorité
 
-**P2 - À développer après les besoins de craft/reconstruction.**
+**P1/P2 - P1 pour les commandes simples, P2 pour le marché avancé.**
 
 ---
 
-### 5.16 Encounters dynamiques
+### 5.19 Encounters dynamiques
 
 #### Intention
 
@@ -860,51 +1065,11 @@ Il se distingue d'une expédition temporaire :
 
 #### Types d'encounters
 
-##### Petit encounter
-
-Durée indicative : 30 minutes à 2 heures.
-
-Exemples :
-
-- voyageur attaqué ;
-- ressource rare apparue ;
-- bête blessée ;
-- coffre échoué ;
-- marchand perdu ;
-- petit groupe de monstres près d'une route.
-
-Objectif : donner une activité courte lors d'une session simple.
-
-##### Encounter régional
-
-Durée indicative : 12 à 72 heures.
-
-Exemples :
-
-- caravane bloquée ;
-- camp de réfugiés ;
-- faille instable ;
-- camp de bandits ;
-- infestation de ruines ;
-- maladie locale ;
-- route temporairement dangereuse.
-
-Objectif : permettre une contribution asynchrone à plusieurs joueurs.
-
-##### Encounter majeur
-
-Durée indicative : 3 à 7 jours.
-
-Exemples :
-
-- épave importante ;
-- siège d'un avant-poste ;
-- apparition d'un portail ;
-- menace sur une route commerciale ;
-- colonie en crise ;
-- ressource exceptionnelle mais instable.
-
-Objectif : créer un mini-arc communautaire sans animation GM obligatoire.
+| Type | Durée indicative | Exemples | Objectif |
+|---|---:|---|---|
+| Petit encounter | 30 min à 2 h | voyageur attaqué, ressource rare, bête blessée, coffre échoué | Activité courte |
+| Encounter régional | 12 à 72 h | caravane bloquée, réfugiés, faille, camp de bandits | Contribution asynchrone |
+| Encounter majeur | 3 à 7 jours | épave importante, siège d'avant-poste, colonie en crise | Mini-arc communautaire |
 
 #### Fonctionnalités
 
@@ -919,68 +1084,6 @@ Objectif : créer un mini-arc communautaire sans animation GM obligatoire.
 - cooldown régional ;
 - outils admin de création, suppression, diagnostic et reset.
 
-#### Exemples adaptés au serveur
-
-##### Caravane en difficulté
-
-Une caravane transporte des ressources vers une colonie. Les joueurs peuvent l'escorter ou intervenir si elle est attaquée.
-
-Succès possible :
-
-- la colonie gagne des ressources ;
-- les prix locaux baissent légèrement ;
-- une route devient plus sûre ;
-- les participants gagnent de la réputation.
-
-Échec possible :
-
-- pénurie temporaire ;
-- instabilité locale augmentée ;
-- apparition d'un avis de recherche.
-
-##### Campement de réfugiés
-
-Des PNJ apparaissent près d'une route ou d'une côte. Ils demandent nourriture, soins ou escorte.
-
-Succès possible :
-
-- un nouveau PNJ rejoint une colonie ;
-- un service mineur est débloqué ;
-- une chronique est générée.
-
-Échec possible :
-
-- disparition du camp ;
-- instabilité accrue ;
-- rumeur sombre sur la région.
-
-##### Rupture d'instabilité
-
-Une faille apparaît dans une région troublée. Les joueurs doivent purifier des points, repousser des créatures ou fermer la faille.
-
-Succès possible :
-
-- baisse de l'instabilité ;
-- ressource rare stabilisée ;
-- accès à une future expédition.
-
-Échec possible :
-
-- monstres supplémentaires ;
-- météo ou ambiance altérée ;
-- ouverture d'une expédition plus dangereuse.
-
-##### Épave échouée
-
-Une épave apparaît sur la côte. Les joueurs peuvent sauver des survivants, récupérer une cargaison, trouver un fragment de carte ou affronter les créatures attirées par les débris.
-
-Succès possible :
-
-- fragment d'expédition ;
-- ressource maritime ;
-- survivant installé en ville ;
-- nouvelle rumeur.
-
 #### Règles anti-abus
 
 - pas de récompense farmable en boucle ;
@@ -993,43 +1096,56 @@ Succès possible :
 - journalisation des participations ;
 - possibilité de désactiver ou nettoyer les encounters via outil admin.
 
-#### Lien avec le LLM
-
-Le LLM peut servir à habiller l'encounter, mais pas à le contrôler.
-
-Le serveur décide :
-
-- type d'encounter ;
-- région ;
-- durée ;
-- difficulté ;
-- objectifs ;
-- récompenses ;
-- conséquences.
-
-Le LLM peut générer :
-
-- rumeur initiale ;
-- nom du PNJ ;
-- description de la scène ;
-- dialogue court ;
-- texte de conclusion ;
-- chronique.
-
 #### Priorité
 
 **P1 - Système transversal majeur.**
 
-Les encounters dynamiques doivent arriver après les premiers tableaux de rumeurs et les premières expéditions simples, mais avant la complexification du LLM, des compagnons ou de la politique.
+---
 
-#### MVP possible
+### 5.20 Identité visuelle, cosmétique et prestige RP
 
-- 3 types d'encounters : caravane, épave, faille mineure ;
-- apparition manuelle ou semi-automatique par région ;
-- durée simple ;
-- récompense plafonnée ;
-- effet sur instabilité ;
-- une ligne de chronique automatique.
+#### Item Transmogrification
+
+À intégrer en **P2 haute**, avec restrictions.
+
+Intérêt : très bon pour le RP visuel. Les joueurs peuvent conserver une identité cohérente sans sacrifier totalement l'efficacité.
+
+Règles recommandées :
+
+- même catégorie d'objet ;
+- pas de transformation trompeuse en PvP ;
+- pas de robe qui cache une armure lourde sans règle claire ;
+- coût en ressource ou service d'artisan ;
+- restrictions de matériaux ;
+- journalisation ou outil admin en cas d'abus.
+
+#### Pet Cosmetics
+
+À garder en **P2/P3**.
+
+Les skins de pets sont intéressants s'ils sont liés au monde :
+
+- région ;
+- lignée ;
+- événement ;
+- réputation ;
+- saison ;
+- expédition rare ;
+- succès RP.
+
+Règle : le cosmétique ne doit pas modifier les statistiques.
+
+#### Prestige non-combat
+
+Le serveur doit aussi permettre du prestige hors combat :
+
+- titre d'explorateur ;
+- maison ou échoppe reconnue ;
+- animal rare ;
+- relique exposée ;
+- contribution à une colonie ;
+- participation à une chronique ;
+- maîtrise artisanale.
 
 ---
 
@@ -1039,19 +1155,28 @@ Les encounters dynamiques doivent arriver après les premiers tableaux de rumeur
 |---|---|---|---|
 | P0 | Île de départ claire | Base d'accueil et identité immédiate | MVP |
 | P0 | Tableaux de rumeurs/contrats | Donne une activité dès la connexion | MVP |
+| P0 | Storage Boxes de base | Évite que craft et reconstruction deviennent pénibles | MVP |
 | P0 | Ouverture progressive des îles | Structure la découverte initiale | MVP / Alpha |
-| P0 | Expéditions temporaires simples | Résout le problème de carte fixe | Alpha 1 |
+| P0/P1 | Expéditions temporaires simples | Résout le problème de carte fixe | Alpha 1 |
 | P1 | Encounters dynamiques | Donne vie au monde entre deux expéditions et sans GM | Alpha 2 |
 | P1 | Instabilité régionale | Monde réactif et asynchrone | Alpha 2 |
 | P1 | Reliques inconnues | Donne du sens à l'exploration | Alpha 2 |
 | P1 | Reconstruction / avant-postes | Progression collective longue | Alpha 2 |
+| P1 | Portable Campsite | Exploration, survie douce, campements RP | Alpha 2 / Beta |
+| P1 | Fulfillment Orders | Économie sociale et commandes de ressources | Alpha 2 / Beta |
+| P1 | City Rentals | Vie RP des villes, auberges, échoppes, ateliers | Beta |
+| P1 stratégique | Custom Taming Systems | Boucle longue pour tamers, chasseurs, rôdeurs et explorateurs | Alpha 2 / Beta |
 | P1 | Chroniques du monde | Renforce RP et asynchrone | Alpha 2 |
-| P1 | Boss mécaniques simples | Aventure mémorable | Alpha 2 / Beta |
-| P2 | Craft d'expédition avancé | Profondeur métier | Beta |
-| P2 | Compagnons de route | Aide solo et petite population | Beta |
+| P1/P2 | Boss mécaniques simples | Aventure mémorable | Alpha 2 / Beta |
+| P1/P2 | Craft d'expédition avancé | Profondeur métier | Beta |
+| P1/P2 | Pets évolutifs avancés | Intéressant si horizontal, utilitaire et non surpuissant | Beta |
+| P1/P2 | BOD Deed Box | QoL craft si BOD important | Beta |
+| P2 | Stable Sphere | QoL tamer après équilibrage du rôle des pets | Beta+ |
 | P2 | PNJ dynamiques / LLM | RP automatisé | Beta |
-| P2 | Housing/agriculture utile | Vie civile durable | Beta |
-| P2 | Économie et contrats joueurs | Social et interdépendance | Beta |
+| P2 | Housing/agriculture avancée | Vie civile durable | Beta |
+| P2 | Vendor Search RP | Commerce lisible sans casser l'immersion | Beta+ |
+| P2 haute | Item Transmogrification | Identité visuelle RP encadrée | Beta+ |
+| P2/P3 | Pet Cosmetics | Prestige et collection | Release+ |
 | P3 | Outils animateurs joueurs | Social avancé | Post-beta |
 | P3 | Politique légère | Endgame communautaire | Post-beta |
 | P3 | Saisons / arcs longs | Renouvellement long terme | Release+ |
@@ -1068,7 +1193,8 @@ Les encounters dynamiques doivent arriver après les premiers tableaux de rumeur
 - choisir les noms définitifs des systèmes ;
 - définir le vocabulaire lore ;
 - créer les premiers documents techniques ;
-- préparer le backlog YouTrack/GitHub Projects.
+- préparer le backlog YouTrack/GitHub Projects ;
+- confirmer les systèmes exclus de la V1.
 
 #### Livrables
 
@@ -1095,6 +1221,7 @@ Un joueur doit pouvoir arriver, comprendre le serveur, faire une activité utile
 - missions simples ;
 - premières ressources utiles ;
 - premiers lieux explorables ;
+- Storage Boxes de base ;
 - une forme minimale de réputation ;
 - premières chroniques manuelles ou semi-automatiques.
 
@@ -1155,7 +1282,7 @@ Les joueurs constatent que leurs actions modifient l'ambiance, les dangers ou le
 
 ---
 
-### Phase 4 - Reconstruction et craft utile
+### Phase 4 - Reconstruction, craft utile et logistique
 
 #### Objectif
 
@@ -1168,7 +1295,9 @@ Créer une boucle durable autour des ressources.
 - avant-postes ;
 - craft d'expédition ;
 - ressources locales ;
-- premiers services débloqués.
+- premiers services débloqués ;
+- commandes simples de ressources ;
+- stockage spécialisé par atelier ou ressource.
 
 #### Critère de réussite
 
@@ -1176,7 +1305,27 @@ Les joueurs ont une raison de récolter, fabriquer, transporter et contribuer au
 
 ---
 
-### Phase 5 - Vie sociale et RP automatisé
+### Phase 5 - Exploration avancée, campements et faune rare
+
+#### Objectif
+
+Renforcer l'identité exploration et ajouter une boucle longue pour les tamers/explorateurs.
+
+#### Fonctionnalités
+
+- Portable Campsite ;
+- premières créatures rares régionales ;
+- premiers indices de pistage ;
+- pets utilitaires simples ;
+- premiers liens entre faune, biome et instabilité.
+
+#### Critère de réussite
+
+Les joueurs explorateurs et tamers disposent d'objectifs longs sans que les pets deviennent une progression de puissance incontrôlée.
+
+---
+
+### Phase 6 - Vie sociale, villes et RP automatisé
 
 #### Objectif
 
@@ -1189,15 +1338,17 @@ Renforcer l'impression de monde vivant.
 - chroniques automatiques ;
 - premiers usages LLM encadrés ;
 - contrats plus narratifs ;
+- City Rentals ;
+- premières échoppes/ateliers louables ;
 - réputation plus visible.
 
 #### Critère de réussite
 
-Les joueurs ont l'impression que le monde parle de ce qui arrive, même sans GM connecté.
+Les joueurs ont l'impression que le monde parle de ce qui arrive, même sans GM connecté, et peuvent s'ancrer dans les villes sans devoir posséder une maison complète.
 
 ---
 
-### Phase 6 - Solo renforcé et compagnons
+### Phase 7 - Solo renforcé, marché RP et confort avancé
 
 #### Objectif
 
@@ -1210,37 +1361,18 @@ Rendre le serveur plus confortable pour petite population sans tuer le multijoue
 - équipement limité ;
 - rôles simples ;
 - progression lente ;
-- restrictions anti-farm.
+- restrictions anti-farm ;
+- Vendor Search RP ;
+- BOD Deed Box si nécessaire ;
+- Stable Sphere si le taming est stabilisé.
 
 #### Critère de réussite
 
-Un joueur solo se sent accompagné, mais un groupe de joueurs reste clairement supérieur.
+Un joueur solo se sent accompagné, mais un groupe de joueurs reste clairement supérieur. Le commerce devient lisible sans casser l'immersion.
 
 ---
 
-### Phase 7 - Social avancé et animation joueur
-
-#### Objectif
-
-Permettre aux joueurs investis de créer du lien social.
-
-#### Fonctionnalités
-
-- statut de joueur-animateur limité ;
-- outils publics ;
-- prérequis ;
-- cooldown ;
-- journalisation ;
-- feedback participants ;
-- validation ou supervision staff.
-
-#### Critère de réussite
-
-Des animations émergent sans GM, sans devenir un outil de farm privé.
-
----
-
-### Phase 8 - Endgame communautaire
+### Phase 8 - Social avancé, prestige et endgame communautaire
 
 #### Objectif
 
@@ -1248,6 +1380,7 @@ Donner une profondeur long terme.
 
 #### Fonctionnalités
 
+- statut de joueur-animateur limité ;
 - gouvernance légère ;
 - décisions de colonie ;
 - saisons ;
@@ -1255,11 +1388,13 @@ Donner une profondeur long terme.
 - menaces régionales ;
 - expéditions rares ;
 - reliques majeures ;
+- Item Transmogrification ;
+- Pet Cosmetics ;
 - conséquences durables.
 
 #### Critère de réussite
 
-Après plusieurs mois, les joueurs ont toujours des objectifs collectifs et personnels.
+Après plusieurs mois, les joueurs ont toujours des objectifs collectifs, personnels, sociaux et de prestige.
 
 ---
 
@@ -1346,9 +1481,9 @@ User Stories possibles :
 - lier reconstruction à instabilité ;
 - créer les premiers avant-postes.
 
-### EPIC-7 - Craft d'expédition
+### EPIC-7 - Craft d'expédition et de reconstruction
 
-Objectif : rendre les métiers utiles à l'exploration.
+Objectif : rendre les métiers utiles à l'exploration et à la reconstruction.
 
 User Stories possibles :
 
@@ -1462,6 +1597,95 @@ User Stories possibles :
 - générer une conclusion ou chronique ;
 - créer les outils admin de spawn, preview, suppression et diagnostic.
 
+### EPIC-15 - Faune rare, taming et pets évolutifs
+
+Objectif : créer une boucle de taming longue durée, liée aux régions, aux biomes, à l'exploration et à l'instabilité du monde.
+
+User Stories possibles :
+
+- définir les familles de créatures rares ;
+- lier les spawns à des régions ou biomes ;
+- créer un système d'indices ou de pistage ;
+- définir les capacités utilitaires ;
+- définir les règles de progression des pets ;
+- limiter la puissance verticale ;
+- prévoir une intégration avec les encounters ;
+- prévoir une intégration avec les expéditions ;
+- définir les règles de stable et de stockage ;
+- créer les premiers pets rares de test.
+
+### EPIC-16 - Logistique artisanale et stockage
+
+Objectif : réduire la friction de stockage et soutenir les métiers, la reconstruction et l'économie artisanale.
+
+User Stories possibles :
+
+- créer les Storage Boxes prioritaires ;
+- définir les catégories de ressources ;
+- créer les coffres d'atelier ;
+- intégrer les ressources de reconstruction ;
+- étudier la BOD Deed Box ;
+- contrôler les limites de stockage ;
+- documenter les usages staff/joueurs.
+
+### EPIC-17 - Commandes joueurs et économie sociale
+
+Objectif : permettre aux joueurs, ateliers et colonies de publier des commandes de ressources ou d'objets.
+
+User Stories possibles :
+
+- créer les commandes de ressources ;
+- créer les commandes d'artisanat ;
+- gérer paiement ou récompense ;
+- gérer expiration ;
+- gérer annulation ;
+- afficher les commandes par ville ou région ;
+- lier certaines commandes aux projets de reconstruction ;
+- éviter le spam et les abus.
+
+### EPIC-18 - Vie urbaine, locations et marché RP
+
+Objectif : peupler les villes et structurer le commerce sans casser l'immersion.
+
+User Stories possibles :
+
+- créer les locations de chambres ;
+- créer les locations d'échoppes ;
+- créer les ateliers louables ;
+- gérer loyers et expiration ;
+- créer un registre marchand régional ;
+- créer un courtier de marché ;
+- définir les limites de recherche ou d'achat distant ;
+- intégrer les locations aux villes et colonies.
+
+### EPIC-19 - Campements d'expédition
+
+Objectif : permettre aux explorateurs de créer des bases temporaires limitées et utiles.
+
+User Stories possibles :
+
+- créer un campement portable de base ;
+- définir durée et expiration ;
+- ajouter feu, couchage et stockage limité ;
+- intégrer cuisine ou réparation légère ;
+- définir les règles anti-abus ;
+- lier certains campements aux expéditions ;
+- tester l'impact sur le solo et le groupe.
+
+### EPIC-20 - Identité visuelle et prestige RP
+
+Objectif : permettre aux joueurs d'affirmer leur identité visuelle sans casser l'équilibrage.
+
+User Stories possibles :
+
+- définir les règles de transmogrification ;
+- limiter par catégorie d'objet ;
+- créer les coûts ou métiers associés ;
+- définir les restrictions PvP ;
+- créer les premiers cosmétiques de pets ;
+- lier certains cosmétiques aux régions ou événements ;
+- prévoir les outils admin de contrôle.
+
 ---
 
 ## 9. Règles anti-dérive
@@ -1501,6 +1725,7 @@ User Stories possibles :
 - objets à histoire ;
 - craft utile ;
 - exploration ;
+- pets utilitaires ou RP ;
 - boss mécaniques ;
 - qualité de vie ciblée.
 
@@ -1543,6 +1768,44 @@ User Stories possibles :
 - journalisation ;
 - lien avec rumeurs, instabilité ou reconstruction.
 
+### 9.5 Ne pas rendre les pets obligatoires
+
+À éviter :
+
+- pet obligatoire pour l'exploration ;
+- pet obligatoire pour le PvE ;
+- pet plus utile qu'un joueur réel ;
+- progression de pet plus importante que celle du personnage ;
+- stockage massif de pets rares.
+
+À privilégier :
+
+- rôle utilitaire ;
+- prestige RP ;
+- spécialisation régionale ;
+- aide contextuelle ;
+- progression plafonnée ;
+- rareté maîtrisée.
+
+### 9.6 Ne pas casser l'immersion par le confort
+
+À éviter :
+
+- achat distant global instantané ;
+- téléportation magique de tous les biens ;
+- stockage illimité sans coût ;
+- campements permanents gratuits ;
+- transmog trompeuse.
+
+À privilégier :
+
+- courtiers ;
+- frais ;
+- délais ;
+- restrictions ;
+- ancrage en ville ;
+- confort au service du RP.
+
 ---
 
 ## 10. Critères d'acceptation globaux
@@ -1581,6 +1844,18 @@ Un encounter dynamique est acceptable s'il respecte les critères suivants :
 - il peut être résolu ou ignoré sans bloquer tout le serveur ;
 - il est compatible avec le jeu asynchrone.
 
+### Critères spécifiques aux pets évolutifs
+
+Un système de pets évolutifs est acceptable s'il respecte les critères suivants :
+
+- il renforce l'exploration, le RP ou la spécialisation ;
+- il ne rend pas le tamer obligatoire ;
+- il ne remplace pas la coopération entre joueurs ;
+- il ne repose pas uniquement sur la hausse de stats ;
+- il garde une rareté et une progression maîtrisées ;
+- il possède des limites de stockage, de contrôle et de puissance ;
+- il donne des usages contextuels plutôt qu'une domination générale.
+
 ---
 
 ## 11. Première cible réaliste
@@ -1592,6 +1867,7 @@ La première version réellement jouable devrait viser peu de systèmes, mais bi
 - une île de départ forte ;
 - un tableau de rumeurs ;
 - quelques contrats ;
+- Storage Boxes de base ;
 - une première expédition temporaire ;
 - un premier encounter dynamique simple ;
 - quelques reliques simples ;
@@ -1609,6 +1885,8 @@ La première version réellement jouable devrait viser peu de systèmes, mais bi
 - agriculture avancée ;
 - économie régionale complète ;
 - génération procédurale complète ;
+- pets évolutifs avancés ;
+- marché global ;
 - systèmes de progression avancés.
 
 ---
@@ -1635,11 +1913,15 @@ Le survivant mentionne une lumière aperçue au large.
 
 Un cartographe ou un PNJ érudit révèle que la carte pointe vers un îlot temporaire.
 
-### Étape 4 - Expédition
+### Étape 4 - Préparation
+
+Les joueurs préparent l'expédition : rations, outils, torches, pet pisteur ou compagnon de route, stockage des ressources inutiles en atelier.
+
+### Étape 5 - Expédition
 
 Un portail maritime ou un embarcadère ouvre l'accès à **l'Îlot aux Lanternes Mortes** pendant sept jours.
 
-### Étape 5 - Exploration
+### Étape 6 - Exploration
 
 Les joueurs y trouvent :
 
@@ -1648,27 +1930,28 @@ Les joueurs y trouvent :
 - épaves ;
 - coffre scellé ;
 - lanterne ancienne ;
-- indice sur une route maritime oubliée.
+- indice sur une route maritime oubliée ;
+- trace d'une créature rare maritime.
 
-### Étape 6 - Retour
+### Étape 7 - Retour
 
 Les joueurs ramènent les ressources à la colonie.
 
-### Étape 7 - Reconstruction
+### Étape 8 - Reconstruction
 
 Le bois salé permet d'améliorer un phare.
 
-### Étape 8 - Conséquence
+### Étape 9 - Conséquence
 
 Le phare réduit les risques maritimes et débloque de nouvelles rumeurs liées à la mer.
 
-### Étape 9 - Chronique
+### Étape 10 - Chronique
 
 Une entrée est ajoutée à la chronique du serveur :
 
 > Les premières lanternes du vieux phare ont été rallumées grâce aux ressources ramenées de l'îlot disparu.
 
-Ce cycle illustre la direction souhaitée : rumeur, encounter, exploration, ressource, RP, reconstruction, conséquence, renouvellement.
+Ce cycle illustre la direction souhaitée : rumeur, encounter, préparation, exploration, ressource, RP, reconstruction, conséquence, renouvellement.
 
 ---
 
@@ -1682,9 +1965,13 @@ Ce cycle illustre la direction souhaitée : rumeur, encounter, exploration, ress
 - Quel niveau de survie est acceptable sans rendre le jeu pénible ?
 - Quelle place donner au PvP ?
 - Les compagnons doivent-ils être accessibles tôt ou plutôt après réputation ?
+- Quelle place donner aux pets rares par rapport aux compagnons humanoïdes ?
+- Quelle limite stricte donner à l'évolution des pets ?
 - Les outils d'animation joueur doivent-ils être accordés manuellement ou automatiquement ?
 - Quelle limite stricte donner au LLM ?
 - Comment afficher les chroniques : en jeu, Discord, wiki, les trois ?
+- Jusqu'où aller dans le confort marchand sans casser le RP ?
+- Quel niveau de stockage est acceptable sans supprimer toute logistique ?
 
 ---
 
@@ -1692,6 +1979,14 @@ Ce cycle illustre la direction souhaitée : rumeur, encounter, exploration, ress
 
 La ligne directrice proposée est la suivante :
 
-> Construire un shard UO RP d'exploration et de reconstruction, jouable seul ou en petit groupe, où une carte fixe est enrichie par des expéditions temporaires, des encounters dynamiques, des rumeurs, des reliques, des colonies évolutives, une progression asynchrone et des outils RP automatisés.
+> Construire un shard UO RP d'exploration et de reconstruction, jouable seul ou en petit groupe, où une carte fixe est enrichie par des expéditions temporaires, des encounters dynamiques, des rumeurs, des reliques, une faune rare, des colonies évolutives, une économie sociale, une progression asynchrone et des outils RP automatisés.
+
+Décision spécifique sur les systèmes complémentaires :
+
+> Retenir les systèmes qui renforcent l'exploration, le RP, la vie sociale, le craft et la reconstruction ; repousser ou encadrer les systèmes qui poussent trop fortement vers la puissance brute, le farm ou l'automatisation excessive.
+
+Décision spécifique sur les pets :
+
+> Le serveur doit proposer une boucle de taming rare et de compagnonnage animal, liée aux régions, aux expéditions et à l'instabilité du monde. Les créatures rares doivent renforcer l'exploration, le RP et l'identité des personnages, sans devenir une progression verticale incontrôlée ni remplacer la coopération entre joueurs.
 
 Cette direction doit guider tous les futurs choix de gameplay et de développement.
