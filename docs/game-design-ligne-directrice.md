@@ -59,15 +59,6 @@ Le serveur ne doit pas être uniquement un monde statique à parcourir, ni un se
 
 > Un monde brisé. Des îles à redécouvrir. Des expéditions qui changent. Des rencontres qui émergent. Une histoire écrite par les joueurs.
 
-### 2.3 Positionnement par rapport aux autres shards
-
-| Référence | Positionnement perçu | Ce qu'il faut éviter | Ce qu'on peut retenir |
-|---|---|---|---|
-| UO Midlands FR | Monde dynamique, factions, PNJ, conquête, politique, guerres de territoires | Copier la guerre de factions, les armées NPC, la conquête de villes | Inspiration sur le monde vivant et les interactions systémiques |
-| Shards of Minax / Maxxia | UO très systémique, progression, loot, boss, pets, craft, builds, économie | Devenir un clone hack'n slash avec trop de caps, trop de loot et trop de systèmes empilés | Expéditions, contrats, compagnons, boss mécaniques, outils admin, progression longue, taming avancé |
-| UO Alive | Monde vivant, QoL, pets, économie, confort de jeu | Copier des systèmes sans les relier à l'identité RP | S'inspirer du confort, de la boucle tamer et de la vie quotidienne |
-| Les Ariaristes | Exploration RP, survie douce, reconstruction, reliques, rumeurs, encounters dynamiques, zones temporaires, progression asynchrone | Diluer l'identité en voulant tout faire | Assumer une direction cohérente et jouable avec peu de staff |
-
 ---
 
 ## 3. Principes de design
