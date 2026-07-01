@@ -76,14 +76,16 @@ layout: table_wrappers
     }
 
     .la-page-toc {
-      align-self: start !important;
-      position: sticky !important;
+      position: fixed !important;
       top: 4.5rem !important;
-      min-width: 0 !important;
+      right: var(--la-content-padding) !important;
+      bottom: 1rem !important;
+      width: var(--la-page-toc-width) !important;
       max-width: var(--la-page-toc-width) !important;
-      max-height: calc(100vh - 5.5rem) !important;
+      min-width: 0 !important;
       overflow-y: auto !important;
       overflow-x: hidden !important;
+      z-index: 20;
     }
   }
 </style>
