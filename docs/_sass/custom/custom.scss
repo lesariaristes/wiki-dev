@@ -55,8 +55,13 @@ html[data-color-scheme="light"] .theme-mode-button.is-active {
   color: #222222;
 }
 
+.main {
+  max-width: none;
+}
+
 .main-content-wrap.la-main-content-wrap {
-  max-width: 1180px;
+  width: 100%;
+  max-width: none;
 }
 
 .la-page-layout {
@@ -67,19 +72,30 @@ html[data-color-scheme="light"] .theme-mode-button.is-active {
   width: 100%;
 }
 
+.la-page-layout .main-content main {
+  max-width: none;
+}
+
 .la-page-toc {
   display: none;
 }
 
 @media (min-width: 66.5rem) {
+  .main {
+    max-width: none;
+  }
+
   .main-content-wrap.la-main-content-wrap {
-    padding-right: 2rem;
+    width: 100%;
+    max-width: min(1780px, calc(100vw - 2rem));
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 
   .la-page-layout {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 16rem;
-    gap: 2rem;
+    grid-template-columns: minmax(0, 1fr) clamp(15rem, 18vw, 20rem);
+    gap: clamp(2rem, 3vw, 3.5rem);
     align-items: start;
   }
 
@@ -88,6 +104,11 @@ html[data-color-scheme="light"] .theme-mode-button.is-active {
   }
 
   .la-page-layout .main-content {
+    width: 100%;
+    max-width: none;
+  }
+
+  .la-page-layout .main-content main {
     max-width: none;
   }
 
@@ -104,6 +125,14 @@ html[data-color-scheme="light"] .theme-mode-button.is-active {
 
   .la-page-toc[hidden] {
     display: none;
+  }
+}
+
+@media (min-width: 120rem) {
+  .main-content-wrap.la-main-content-wrap {
+    max-width: min(1900px, calc(100vw - 2rem));
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 }
 
@@ -212,10 +241,6 @@ html[data-color-scheme="light"] .la-page-toc__link.is-active {
 
 .side-bar .nav-list .nav-list-link[href="/docs/game-design-ligne-directrice/"]::before {
   content: "🎮";
-}
-
-.side-bar .nav-list .nav-list-link[href="/docs/game-design-systemes-complementaires/"]::before {
-  content: "🧩";
 }
 
 .side-bar .nav-list .nav-list-link[href="/docs/mecaniques/monde-vivant/"]::before {
