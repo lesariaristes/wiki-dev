@@ -17,12 +17,21 @@ footer_content: |
       function pageCandidates() {
         let path = decodeURIComponent(window.location.pathname || "/");
         path = path.replace(/\/+$/, "");
+        path = path.replace(/^\/+/, "");
 
         if (path === "") {
           return ["docs/index.md"];
         }
 
-        path = path.replace(/^\//, "");
+        // Le site expose les pages sous /docs/ mais les sources Markdown sont déjà dans le dossier docs/.
+        // Exemple : /docs/game-design-ligne-directrice/ -> docs/game-design-ligne-directrice.md
+        if (path === "docs") {
+          return ["docs/index.md"];
+        }
+
+        if (path.startsWith("docs/")) {
+          path = path.substring("docs/".length);
+        }
 
         return [
           `docs/${path}.md`,
