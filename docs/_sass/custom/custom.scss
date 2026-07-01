@@ -54,3 +54,223 @@ html[data-color-scheme="light"] .theme-mode-button.is-active {
   background: #ffffff;
   color: #222222;
 }
+
+.main-content-wrap.la-main-content-wrap {
+  max-width: 1180px;
+}
+
+.la-page-layout {
+  min-width: 0;
+}
+
+.la-page-layout .main-content {
+  width: 100%;
+}
+
+.la-page-toc {
+  display: none;
+}
+
+@media (min-width: 66.5rem) {
+  .main-content-wrap.la-main-content-wrap {
+    padding-right: 2rem;
+  }
+
+  .la-page-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 16rem;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .la-page-layout--no-toc {
+    display: block;
+  }
+
+  .la-page-layout .main-content {
+    max-width: none;
+  }
+
+  .la-page-toc {
+    display: block;
+    position: sticky;
+    top: 5rem;
+    max-height: calc(100vh - 6rem);
+    padding: 0.9rem 0 0.9rem 1rem;
+    overflow: auto;
+    border-left: 1px solid rgba(140, 140, 160, 0.28);
+    font-size: 0.84rem;
+  }
+
+  .la-page-toc[hidden] {
+    display: none;
+  }
+}
+
+.la-page-toc__title {
+  margin-bottom: 0.65rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(220, 220, 235, 0.72);
+}
+
+.la-page-toc__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.la-page-toc__item {
+  margin: 0;
+}
+
+.la-page-toc__item--h3 {
+  padding-left: 0.9rem;
+}
+
+.la-page-toc__link {
+  display: block;
+  padding: 0.28rem 0.6rem 0.28rem 0;
+  color: rgba(220, 220, 235, 0.72);
+  line-height: 1.35;
+  text-decoration: none;
+  border-radius: 0.45rem;
+}
+
+.la-page-toc__link:hover,
+.la-page-toc__link.is-active {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.la-page-toc__link.is-active {
+  font-weight: 700;
+}
+
+html[data-color-scheme="light"] .la-page-toc {
+  border-left-color: #dfe3ea;
+}
+
+html[data-color-scheme="light"] .la-page-toc__title,
+html[data-color-scheme="light"] .la-page-toc__link {
+  color: #5f6673;
+}
+
+html[data-color-scheme="light"] .la-page-toc__link:hover,
+html[data-color-scheme="light"] .la-page-toc__link.is-active {
+  color: #111827;
+}
+
+.side-bar .site-title {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.side-bar .nav-list .nav-list-item .nav-list-link {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-height: 2.15rem;
+  margin: 0.1rem 0.55rem;
+  padding: 0.42rem 0.65rem;
+  border-radius: 0.7rem;
+  line-height: 1.25;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+.side-bar .nav-list .nav-list-item .nav-list-link:hover {
+  background: rgba(140, 140, 160, 0.14);
+  text-decoration: none;
+  transform: translateX(2px);
+}
+
+.side-bar .nav-list .nav-list-item .nav-list-link.active {
+  background: rgba(114, 137, 218, 0.22);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.side-bar .nav-list .nav-list-item .nav-list-link::before {
+  content: "📄";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.35rem;
+  min-width: 1.35rem;
+  height: 1.35rem;
+  font-size: 0.92rem;
+  line-height: 1;
+  border-radius: 0.45rem;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.side-bar .nav-list .nav-list-link[href="/"]::before {
+  content: "🏠";
+}
+
+.side-bar .nav-list .nav-list-link[href="/docs/game-design-ligne-directrice/"]::before {
+  content: "🎮";
+}
+
+.side-bar .nav-list .nav-list-link[href="/docs/game-design-systemes-complementaires/"]::before {
+  content: "🧩";
+}
+
+.side-bar .nav-list .nav-list-link[href="/docs/mecaniques/monde-vivant/"]::before {
+  content: "🌍";
+}
+
+.side-bar .nav-list .nav-list-link[href="/docs/mecaniques/factions/"]::before {
+  content: "⚔️";
+}
+
+.side-bar .nav-list .nav-list-link[href="/docs/mecaniques/villes/"]::before {
+  content: "🏛️";
+}
+
+.side-bar .nav-list .nav-list-link[href="/docs/mecaniques/territoires/"]::before {
+  content: "🗺️";
+}
+
+.side-bar .nav-list .nav-list-link[href="/docs/mecaniques/economie-recompenses/"]::before {
+  content: "💰";
+}
+
+.side-bar .nav-list .nav-list-link[href="/docs/mecaniques/tests-et-feuille-de-route/"]::before {
+  content: "✅";
+}
+
+.side-bar .nav-list .nav-list-link[href="/docs/onboarding/"]::before {
+  content: "🚀";
+}
+
+.side-bar .nav-list .nav-list-link[href="/docs/conventions/"]::before {
+  content: "📐";
+}
+
+.side-bar .nav-list .nav-list-link[href="/docs/architecture/"]::before {
+  content: "🏗️";
+}
+
+.side-bar .nav-list .nav-list-link[href="/docs/runbooks/"]::before {
+  content: "🛠️";
+}
+
+.side-bar .nav-list .nav-list-link[href="/docs/decisions/"]::before {
+  content: "📌";
+}
+
+html[data-color-scheme="light"] .side-bar .nav-list .nav-list-item .nav-list-link:hover {
+  background: #eef2f7;
+}
+
+html[data-color-scheme="light"] .side-bar .nav-list .nav-list-item .nav-list-link.active {
+  background: #e8edff;
+  color: #1f2a44;
+}
+
+html[data-color-scheme="light"] .side-bar .nav-list .nav-list-item .nav-list-link::before {
+  background: rgba(31, 42, 68, 0.07);
+}
