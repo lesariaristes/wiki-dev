@@ -64,14 +64,14 @@
     }
 
     const date = commit.commit?.committer?.date || commit.commit?.author?.date;
-    const committer = commit.committer?.login || commit.author?.login || commit.commit?.committer?.name || commit.commit?.author?.name || "inconnu";
+    const author = commit.author?.login || commit.commit?.author?.name || commit.committer?.login || commit.commit?.committer?.name || "inconnu";
 
     if (!date) {
       target.textContent = "Dernière modification indisponible";
       return;
     }
 
-    target.textContent = `Dernière modification le ${formatDate(date)} par ${committer}`;
+    target.textContent = `Dernière modification le ${formatDate(date)} par ${author}`;
   }
 
   if (document.readyState === "loading") {
