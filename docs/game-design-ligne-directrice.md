@@ -47,6 +47,7 @@ Le serveur ne doit pas être uniquement un monde statique à parcourir, ni un se
 
 - découvrent progressivement des îles et des secrets ;
 - ouvrent des expéditions temporaires vers des zones instables ;
+- rencontrent des situations dynamiques qui donnent vie au monde entre deux expéditions ;
 - ramènent ressources, reliques, connaissances et récits ;
 - reconstruisent des lieux, des routes, des avant-postes et des colonies ;
 - interagissent avec des PNJ plus vivants grâce à des systèmes automatisés et, à terme, à des dialogues assistés par LLM ;
@@ -55,7 +56,7 @@ Le serveur ne doit pas être uniquement un monde statique à parcourir, ni un se
 
 ### 2.2 Phrase d'identité
 
-> Un monde brisé. Des îles à redécouvrir. Des expéditions qui changent. Une histoire écrite par les joueurs.
+> Un monde brisé. Des îles à redécouvrir. Des expéditions qui changent. Des rencontres qui émergent. Une histoire écrite par les joueurs.
 
 ### 2.3 Positionnement par rapport aux autres shards
 
@@ -63,7 +64,7 @@ Le serveur ne doit pas être uniquement un monde statique à parcourir, ni un se
 |---|---|---|---|
 | UO Midlands FR | Monde dynamique, factions, PNJ, conquête, politique, guerres de territoires | Copier la guerre de factions, les armées NPC, la conquête de villes | Inspiration sur le monde vivant et les interactions systémiques |
 | Shards of Minax | UO très systémique, progression, loot, boss, pets, craft, builds, économie | Devenir un clone hack'n slash avec trop de caps, trop de loot et trop de systèmes empilés | Expéditions, contrats, compagnons, boss mécaniques, outils admin, progression longue |
-| Les Ariaristes | Exploration RP, survie douce, reconstruction, reliques, rumeurs, zones temporaires, progression asynchrone | Diluer l'identité en voulant tout faire | Assumer une direction cohérente et jouable avec peu de staff |
+| Les Ariaristes | Exploration RP, survie douce, reconstruction, reliques, rumeurs, encounters dynamiques, zones temporaires, progression asynchrone | Diluer l'identité en voulant tout faire | Assumer une direction cohérente et jouable avec peu de staff |
 
 ---
 
@@ -78,6 +79,7 @@ Implications :
 - rumeurs générées ou renouvelées automatiquement ;
 - contrats récurrents ;
 - expéditions temporaires ;
+- encounters dynamiques temporaires ;
 - événements déclenchés par l'état du monde ;
 - PNJ capables de fournir un minimum de contexte ;
 - progression collective visible sans intervention manuelle.
@@ -93,6 +95,7 @@ Implications :
 - contribution asynchrone ;
 - objectifs collectifs non bloqués par l'absence d'un joueur ;
 - compagnons de route limités pour aider les joueurs seuls ;
+- encounters ouverts assez longtemps pour ne pas pénaliser les joueurs hors horaires de pointe ;
 - systèmes sociaux incitant à coopérer sans forcer une présence quotidienne.
 
 ### 3.3 Progression asynchrone équitable
@@ -105,6 +108,7 @@ Règles :
 - les événements majeurs ne doivent pas disparaître en quelques heures ;
 - les récompenses doivent distinguer participation et monopole ;
 - les expéditions temporaires doivent avoir une durée suffisante ;
+- les encounters dynamiques importants doivent rester visibles assez longtemps pour permettre une participation différée ;
 - les nouveaux joueurs doivent toujours avoir des choses à découvrir, même si les anciennes îles sont déjà ouvertes.
 
 ### 3.4 Découverte renouvelée malgré une carte fixe
@@ -114,6 +118,7 @@ La carte principale d'Ultima Online est limitée et rapidement parcourue. Le ren
 Le serveur doit donc ajouter des couches dynamiques :
 
 - expéditions temporaires ;
+- encounters dynamiques ;
 - zones instables ;
 - donjons ou lieux générés côté serveur ;
 - rumeurs évolutives ;
@@ -129,6 +134,7 @@ Le RP doit avoir des conséquences concrètes, mais sans nécessiter une animati
 Exemples :
 
 - une rumeur peut mener à une expédition ;
+- un encounter peut sauver ou condamner un PNJ ;
 - une relique identifiée peut débloquer une recette ;
 - une colonie aidée peut proposer un nouveau service ;
 - une région négligée peut devenir plus dangereuse ;
@@ -171,9 +177,10 @@ Déroulé type :
 2. Il choisit une activité adaptée à son temps disponible.
 3. Il prépare son équipement, son compagnon ou ses outils.
 4. Il part explorer, récolter, escorter, enquêter ou combattre.
-5. Il ramène une preuve, des ressources, une relique ou une information.
-6. Il reçoit une récompense ou contribue à un objectif collectif.
-7. Une trace est ajoutée au monde : réputation, chronique, progression de colonie, nouvelle rumeur.
+5. Il peut tomber sur un encounter dynamique : voyageur en danger, ressource rare, faille mineure, épave, campement, menace locale.
+6. Il ramène une preuve, des ressources, une relique ou une information.
+7. Il reçoit une récompense ou contribue à un objectif collectif.
+8. Une trace est ajoutée au monde : réputation, chronique, progression de colonie, nouvelle rumeur.
 
 ### 4.2 Boucle moyenne : progression sur quelques jours
 
@@ -183,11 +190,12 @@ Déroulé type :
 
 1. Une région gagne en instabilité.
 2. Des rumeurs apparaissent.
-3. Des joueurs enquêtent à différents moments.
-4. Des ressources spécifiques sont demandées.
-5. Une expédition temporaire est ouverte.
-6. Les joueurs ramènent des objets ou informations.
-7. La région évolue : menace réduite, avant-poste amélioré, nouvelle route ouverte, nouveau PNJ installé.
+3. Un ou plusieurs encounters dynamiques sont générés.
+4. Des joueurs enquêtent à différents moments.
+5. Des ressources spécifiques sont demandées.
+6. Une expédition temporaire peut être ouverte.
+7. Les joueurs ramènent des objets ou informations.
+8. La région évolue : menace réduite, avant-poste amélioré, nouvelle route ouverte, nouveau PNJ installé.
 
 ### 4.3 Boucle longue : progression sur plusieurs semaines
 
@@ -197,11 +205,12 @@ Déroulé type :
 
 1. Une île principale est découverte ou rendue accessible.
 2. Les joueurs explorent ses lieux fixes.
-3. Des expéditions liées à l'île apparaissent.
-4. Une colonie ou un avant-poste s'y développe.
-5. Des métiers deviennent utiles localement.
-6. Des secrets sont révélés progressivement.
-7. L'île devient un nouveau hub partiel, sans rendre les anciennes zones obsolètes.
+3. Des rumeurs et encounters liés à l'île apparaissent.
+4. Des expéditions liées à l'île apparaissent.
+5. Une colonie ou un avant-poste s'y développe.
+6. Des métiers deviennent utiles localement.
+7. Des secrets sont révélés progressivement.
+8. L'île devient un nouveau hub partiel, sans rendre les anciennes zones obsolètes.
 
 ---
 
@@ -220,6 +229,7 @@ Les îles principales constituent le squelette du monde. Elles doivent donner un
 - ruines, grottes, villages, ports, sanctuaires ;
 - accès vers expéditions temporaires ;
 - rumeurs propres à chaque île ;
+- encounters dynamiques locaux ;
 - ressources locales ;
 - dangers ou biomes distincts.
 
@@ -312,6 +322,7 @@ Chaque île ou région possède un niveau d'instabilité. Ce niveau monte ou des
 - trop de monstres tués ;
 - trop de ressources extraites ;
 - expéditions ouvertes ;
+- encounters échoués ou ignorés ;
 - reliques ramenées sans purification ;
 - échecs de contrats ;
 - zones ignorées trop longtemps ;
@@ -326,6 +337,7 @@ Chaque île ou région possède un niveau d'instabilité. Ce niveau monte ou des
 - apparition de portails ;
 - rumeurs inquiétantes ;
 - attaque de caravane ;
+- campement hostile ;
 - mini-boss régional ;
 - coût plus élevé des services locaux ;
 - PNJ qui quittent temporairement une zone.
@@ -338,7 +350,7 @@ Chaque île ou région possède un niveau d'instabilité. Ce niveau monte ou des
 
 - jauge simple par région ;
 - seuils : stable, troublée, dangereuse, critique ;
-- déclenchement de spawns ou rumeurs à chaque seuil ;
+- déclenchement de spawns, rumeurs ou encounters à chaque seuil ;
 - décrue automatique lente.
 
 ---
@@ -357,7 +369,8 @@ Fournir au joueur une raison claire de se connecter et d'agir.
 - contrats d'expédition ;
 - demandes d'artisans ;
 - appels à escorte ;
-- demandes de ressources.
+- demandes de ressources ;
+- signalements d'encounters dynamiques.
 
 #### Types de missions
 
@@ -370,7 +383,8 @@ Fournir au joueur une raison claire de se connecter et d'agir.
 - cartographie ;
 - contribution à une construction ;
 - récupération de relique ;
-- assistance à un PNJ.
+- assistance à un PNJ ;
+- résolution d'un encounter local.
 
 #### Règles anti-abus
 
@@ -471,7 +485,8 @@ Les joueurs contribuent à améliorer des lieux du monde : campements, villages,
 - bonus de repos ;
 - stockage limité ;
 - accès à du craft local ;
-- amélioration des prix ou services.
+- amélioration des prix ou services ;
+- réduction ou transformation de certains encounters hostiles.
 
 #### Priorité
 
@@ -636,6 +651,7 @@ Le LLM doit enrichir le texte, le contexte et le RP. Il ne doit pas décider lib
 - générer des descriptions d'expédition ;
 - produire des chroniques ;
 - créer des variantes de quêtes à partir de templates ;
+- habiller narrativement des encounters dynamiques ;
 - aider les animateurs joueurs avec des textes.
 
 #### Usages interdits ou strictement encadrés
@@ -677,7 +693,8 @@ Donner du poids aux actions joueurs et aider les joueurs asynchrones à suivre l
 - historique des contributions ;
 - livres ou panneaux en jeu ;
 - export Discord ou wiki ;
-- rumeurs issues d'actions passées.
+- rumeurs issues d'actions passées ;
+- conclusion automatique des encounters significatifs.
 
 #### Priorité
 
@@ -824,6 +841,198 @@ Favoriser les échanges sociaux sans imposer une économie complexe dès le dép
 
 ---
 
+### 5.16 Encounters dynamiques
+
+#### Intention
+
+Créer des micro-situations temporaires qui donnent vie au monde entre deux expéditions, sans dépendre d'un GM connecté.
+
+Un encounter dynamique ne doit pas être un simple spawn aléatoire. Il doit être une situation courte ou moyenne, contextualisée, limitée dans le temps, avec une action joueur claire et une conséquence possible.
+
+#### Définition
+
+Un encounter dynamique est une scène émergente dans le monde persistant : caravane attaquée, réfugiés, faille instable, épave, ressource rare, campement hostile, PNJ de passage, chasseur disparu, créature blessée, rituel interrompu.
+
+Il se distingue d'une expédition temporaire :
+
+- l'expédition ouvre un espace d'exploration dédié ;
+- l'encounter apparaît dans le monde existant et anime une région déjà connue.
+
+#### Types d'encounters
+
+##### Petit encounter
+
+Durée indicative : 30 minutes à 2 heures.
+
+Exemples :
+
+- voyageur attaqué ;
+- ressource rare apparue ;
+- bête blessée ;
+- coffre échoué ;
+- marchand perdu ;
+- petit groupe de monstres près d'une route.
+
+Objectif : donner une activité courte lors d'une session simple.
+
+##### Encounter régional
+
+Durée indicative : 12 à 72 heures.
+
+Exemples :
+
+- caravane bloquée ;
+- camp de réfugiés ;
+- faille instable ;
+- camp de bandits ;
+- infestation de ruines ;
+- maladie locale ;
+- route temporairement dangereuse.
+
+Objectif : permettre une contribution asynchrone à plusieurs joueurs.
+
+##### Encounter majeur
+
+Durée indicative : 3 à 7 jours.
+
+Exemples :
+
+- épave importante ;
+- siège d'un avant-poste ;
+- apparition d'un portail ;
+- menace sur une route commerciale ;
+- colonie en crise ;
+- ressource exceptionnelle mais instable.
+
+Objectif : créer un mini-arc communautaire sans animation GM obligatoire.
+
+#### Fonctionnalités
+
+- apparition contrôlée par région ;
+- durée de vie limitée ;
+- contexte RP affiché via rumeur, message, PNJ ou tableau ;
+- objectifs simples ;
+- contribution solo ou collective ;
+- récompense plafonnée ;
+- conséquence sur réputation, instabilité, colonie ou chronique ;
+- journalisation automatique ;
+- cooldown régional ;
+- outils admin de création, suppression, diagnostic et reset.
+
+#### Exemples adaptés au serveur
+
+##### Caravane en difficulté
+
+Une caravane transporte des ressources vers une colonie. Les joueurs peuvent l'escorter ou intervenir si elle est attaquée.
+
+Succès possible :
+
+- la colonie gagne des ressources ;
+- les prix locaux baissent légèrement ;
+- une route devient plus sûre ;
+- les participants gagnent de la réputation.
+
+Échec possible :
+
+- pénurie temporaire ;
+- instabilité locale augmentée ;
+- apparition d'un avis de recherche.
+
+##### Campement de réfugiés
+
+Des PNJ apparaissent près d'une route ou d'une côte. Ils demandent nourriture, soins ou escorte.
+
+Succès possible :
+
+- un nouveau PNJ rejoint une colonie ;
+- un service mineur est débloqué ;
+- une chronique est générée.
+
+Échec possible :
+
+- disparition du camp ;
+- instabilité accrue ;
+- rumeur sombre sur la région.
+
+##### Rupture d'instabilité
+
+Une faille apparaît dans une région troublée. Les joueurs doivent purifier des points, repousser des créatures ou fermer la faille.
+
+Succès possible :
+
+- baisse de l'instabilité ;
+- ressource rare stabilisée ;
+- accès à une future expédition.
+
+Échec possible :
+
+- monstres supplémentaires ;
+- météo ou ambiance altérée ;
+- ouverture d'une expédition plus dangereuse.
+
+##### Épave échouée
+
+Une épave apparaît sur la côte. Les joueurs peuvent sauver des survivants, récupérer une cargaison, trouver un fragment de carte ou affronter les créatures attirées par les débris.
+
+Succès possible :
+
+- fragment d'expédition ;
+- ressource maritime ;
+- survivant installé en ville ;
+- nouvelle rumeur.
+
+#### Règles anti-abus
+
+- pas de récompense farmable en boucle ;
+- récompense importante limitée par compte ou par période ;
+- contribution minimale requise ;
+- les récompenses principales doivent être réputation, progression collective, ressource spécifique ou information, pas seulement or et loot ;
+- les encounters de forte valeur doivent être publics ou visibles ;
+- cooldown par région et par type ;
+- pas de déclenchement manuel joueur permettant de farmer son propre groupe ;
+- journalisation des participations ;
+- possibilité de désactiver ou nettoyer les encounters via outil admin.
+
+#### Lien avec le LLM
+
+Le LLM peut servir à habiller l'encounter, mais pas à le contrôler.
+
+Le serveur décide :
+
+- type d'encounter ;
+- région ;
+- durée ;
+- difficulté ;
+- objectifs ;
+- récompenses ;
+- conséquences.
+
+Le LLM peut générer :
+
+- rumeur initiale ;
+- nom du PNJ ;
+- description de la scène ;
+- dialogue court ;
+- texte de conclusion ;
+- chronique.
+
+#### Priorité
+
+**P1 - Système transversal majeur.**
+
+Les encounters dynamiques doivent arriver après les premiers tableaux de rumeurs et les premières expéditions simples, mais avant la complexification du LLM, des compagnons ou de la politique.
+
+#### MVP possible
+
+- 3 types d'encounters : caravane, épave, faille mineure ;
+- apparition manuelle ou semi-automatique par région ;
+- durée simple ;
+- récompense plafonnée ;
+- effet sur instabilité ;
+- une ligne de chronique automatique.
+
+---
+
 ## 6. Matrice de priorisation
 
 | Priorité | Fonctionnalité | Pourquoi | Phase cible |
@@ -832,6 +1041,7 @@ Favoriser les échanges sociaux sans imposer une économie complexe dès le dép
 | P0 | Tableaux de rumeurs/contrats | Donne une activité dès la connexion | MVP |
 | P0 | Ouverture progressive des îles | Structure la découverte initiale | MVP / Alpha |
 | P0 | Expéditions temporaires simples | Résout le problème de carte fixe | Alpha 1 |
+| P1 | Encounters dynamiques | Donne vie au monde entre deux expéditions et sans GM | Alpha 2 |
 | P1 | Instabilité régionale | Monde réactif et asynchrone | Alpha 2 |
 | P1 | Reliques inconnues | Donne du sens à l'exploration | Alpha 2 |
 | P1 | Reconstruction / avant-postes | Progression collective longue | Alpha 2 |
@@ -922,24 +1132,26 @@ Un joueur ayant déjà parcouru l'île principale a encore une raison de partir 
 
 ---
 
-### Phase 3 - Instabilité et conséquences
+### Phase 3 - Encounters, instabilité et conséquences
 
 #### Objectif
 
-Faire réagir le monde aux actions joueurs.
+Faire réagir le monde aux actions joueurs et créer des situations vivantes dans les régions déjà connues.
 
 #### Fonctionnalités
 
+- premiers encounters dynamiques ;
 - jauge d'instabilité régionale ;
 - seuils ;
 - rumeurs liées aux seuils ;
 - spawns ou événements associés ;
 - décrue automatique ;
-- premiers effets sur colonies.
+- premiers effets sur colonies ;
+- chronique automatique de conclusion pour les encounters significatifs.
 
 #### Critère de réussite
 
-Les joueurs constatent que leurs actions modifient l'ambiance, les dangers ou les opportunités d'une région.
+Les joueurs constatent que leurs actions modifient l'ambiance, les dangers ou les opportunités d'une région. Même sans nouvelle île ou nouvelle expédition, le monde donne l'impression qu'il se passe quelque chose.
 
 ---
 
@@ -1102,7 +1314,7 @@ User Stories possibles :
 - créer une jauge par région ;
 - définir les sources de variation ;
 - créer les seuils ;
-- déclencher rumeurs/spawns ;
+- déclencher rumeurs/spawns/encounters ;
 - afficher l'état local ;
 - décrue automatique ;
 - outils admin de reset/ajustement.
@@ -1158,7 +1370,8 @@ User Stories possibles :
 - affichage en jeu ;
 - export Discord/wiki ;
 - résumé des contributions ;
-- historique des expéditions.
+- historique des expéditions ;
+- conclusion des encounters significatifs.
 
 ### EPIC-9 - PNJ dynamiques et LLM encadré
 
@@ -1171,6 +1384,7 @@ User Stories possibles :
 - limiter contexte ;
 - générer dialogues ;
 - générer rumeurs ;
+- générer descriptions d'encounters ;
 - valider réponses ;
 - journaliser outputs sensibles ;
 - fallback sans LLM.
@@ -1231,6 +1445,23 @@ User Stories possibles :
 - décisions temporaires ;
 - conséquences visibles.
 
+### EPIC-14 - Encounters dynamiques
+
+Objectif : faire apparaître dans le monde des micro-situations temporaires, contextualisées et limitées, liées aux rumeurs, à l'instabilité régionale et aux actions joueurs.
+
+User Stories possibles :
+
+- définir les types d'encounters ;
+- créer une structure de données commune ;
+- créer les règles d'apparition par région ;
+- gérer durée de vie et expiration ;
+- lier encounters aux rumeurs ;
+- lier encounters à l'instabilité ;
+- gérer contribution solo et collective ;
+- plafonner les récompenses ;
+- générer une conclusion ou chronique ;
+- créer les outils admin de spawn, preview, suppression et diagnostic.
+
 ---
 
 ## 9. Règles anti-dérive
@@ -1286,10 +1517,31 @@ User Stories possibles :
 
 - templates ;
 - automatisation ;
+- encounters dynamiques ;
 - expiration longue ;
 - LLM encadré ;
 - chroniques ;
 - systèmes autonomes.
+
+### 9.4 Ne pas transformer les encounters en farm déguisé
+
+À éviter :
+
+- spawn aléatoire sans contexte ;
+- coffres répétables en boucle ;
+- mini-boss sans conséquence ;
+- récompense uniquement en or ou loot ;
+- apparition déclenchable par un joueur pour son propre groupe.
+
+À privilégier :
+
+- contexte RP ;
+- visibilité publique ;
+- durée limitée ;
+- récompense plafonnée ;
+- conséquence sur le monde ;
+- journalisation ;
+- lien avec rumeurs, instabilité ou reconstruction.
 
 ---
 
@@ -1317,6 +1569,18 @@ Une fonctionnalité doit être re-questionnée si elle :
 - complexifie fortement sans renforcer l'identité ;
 - copie trop directement un autre shard.
 
+### Critères spécifiques aux encounters dynamiques
+
+Un encounter dynamique est acceptable s'il respecte les critères suivants :
+
+- il possède un contexte RP compréhensible ;
+- il a une durée limitée ;
+- il indique clairement ce que le joueur peut faire ;
+- il a une conséquence ou une trace ;
+- il n'est pas farmable indéfiniment ;
+- il peut être résolu ou ignoré sans bloquer tout le serveur ;
+- il est compatible avec le jeu asynchrone.
+
 ---
 
 ## 11. Première cible réaliste
@@ -1329,6 +1593,7 @@ La première version réellement jouable devrait viser peu de systèmes, mais bi
 - un tableau de rumeurs ;
 - quelques contrats ;
 - une première expédition temporaire ;
+- un premier encounter dynamique simple ;
 - quelques reliques simples ;
 - une première contribution de reconstruction ;
 - une chronique minimale ;
@@ -1360,15 +1625,21 @@ L'île de départ est partiellement reconstruite. Un tableau de rumeurs affiche 
 
 Un joueur trouve une carte abîmée lors d'une mission de récupération.
 
-### Étape 2 - Identification
+### Étape 2 - Encounter dynamique
+
+Avant même l'expédition, une épave échouée apparaît sur la côte. Les joueurs peuvent sauver un survivant, récupérer une cargaison ou ignorer la scène.
+
+Le survivant mentionne une lumière aperçue au large.
+
+### Étape 3 - Identification
 
 Un cartographe ou un PNJ érudit révèle que la carte pointe vers un îlot temporaire.
 
-### Étape 3 - Expédition
+### Étape 4 - Expédition
 
 Un portail maritime ou un embarcadère ouvre l'accès à **l'Îlot aux Lanternes Mortes** pendant sept jours.
 
-### Étape 4 - Exploration
+### Étape 5 - Exploration
 
 Les joueurs y trouvent :
 
@@ -1379,25 +1650,25 @@ Les joueurs y trouvent :
 - lanterne ancienne ;
 - indice sur une route maritime oubliée.
 
-### Étape 5 - Retour
+### Étape 6 - Retour
 
 Les joueurs ramènent les ressources à la colonie.
 
-### Étape 6 - Reconstruction
+### Étape 7 - Reconstruction
 
 Le bois salé permet d'améliorer un phare.
 
-### Étape 7 - Conséquence
+### Étape 8 - Conséquence
 
 Le phare réduit les risques maritimes et débloque de nouvelles rumeurs liées à la mer.
 
-### Étape 8 - Chronique
+### Étape 9 - Chronique
 
 Une entrée est ajoutée à la chronique du serveur :
 
 > Les premières lanternes du vieux phare ont été rallumées grâce aux ressources ramenées de l'îlot disparu.
 
-Ce cycle illustre la direction souhaitée : exploration, ressource, RP, reconstruction, conséquence, renouvellement.
+Ce cycle illustre la direction souhaitée : rumeur, encounter, exploration, ressource, RP, reconstruction, conséquence, renouvellement.
 
 ---
 
@@ -1405,6 +1676,7 @@ Ce cycle illustre la direction souhaitée : exploration, ressource, RP, reconstr
 
 - Quel nom final donner aux expéditions temporaires ?
 - Quelle durée de persistance par défaut : 3, 7 ou 14 jours ?
+- Quelle durée donner aux encounters : 2h, 24h, 72h selon leur taille ?
 - L'ouverture des îles doit-elle être calendaire, communautaire ou mixte ?
 - Quelle part de contenu doit être solo, groupe léger, groupe difficile ?
 - Quel niveau de survie est acceptable sans rendre le jeu pénible ?
@@ -1420,6 +1692,6 @@ Ce cycle illustre la direction souhaitée : exploration, ressource, RP, reconstr
 
 La ligne directrice proposée est la suivante :
 
-> Construire un shard UO RP d'exploration et de reconstruction, jouable seul ou en petit groupe, où une carte fixe est enrichie par des expéditions temporaires, des rumeurs dynamiques, des reliques, des colonies évolutives, une progression asynchrone et des outils RP automatisés.
+> Construire un shard UO RP d'exploration et de reconstruction, jouable seul ou en petit groupe, où une carte fixe est enrichie par des expéditions temporaires, des encounters dynamiques, des rumeurs, des reliques, des colonies évolutives, une progression asynchrone et des outils RP automatisés.
 
 Cette direction doit guider tous les futurs choix de gameplay et de développement.
