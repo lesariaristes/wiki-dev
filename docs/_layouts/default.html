@@ -8,13 +8,40 @@ layout: table_wrappers
 {% include head.html %}
 <style>
   @media (min-width: 66.5rem) {
+    :root {
+      --la-sidebar-width: clamp(15rem, 14vw, 17.5rem);
+      --la-page-toc-width: clamp(14rem, 15vw, 19rem);
+      --la-content-padding: clamp(1.5rem, 2vw, 2.75rem);
+      --la-content-gap: clamp(1.5rem, 2.25vw, 3rem);
+    }
+
+    html,
     body {
       overflow-x: hidden;
     }
 
-    .main,
+    .side-bar {
+      width: var(--la-sidebar-width) !important;
+      min-width: var(--la-sidebar-width) !important;
+    }
+
+    .site-header,
+    .site-title,
+    .site-nav,
+    .site-footer {
+      width: var(--la-sidebar-width) !important;
+    }
+
+    .main {
+      box-sizing: border-box;
+      width: calc(100vw - var(--la-sidebar-width)) !important;
+      max-width: none !important;
+      margin-left: var(--la-sidebar-width) !important;
+    }
+
     .main-header {
-      width: auto !important;
+      box-sizing: border-box;
+      width: 100% !important;
       max-width: none !important;
     }
 
@@ -23,15 +50,15 @@ layout: table_wrappers
       width: 100% !important;
       max-width: none !important;
       margin: 0 !important;
-      padding-left: clamp(1.75rem, 2.25vw, 3rem) !important;
-      padding-right: clamp(1.75rem, 2.25vw, 3rem) !important;
+      padding-left: var(--la-content-padding) !important;
+      padding-right: var(--la-content-padding) !important;
     }
 
     .la-page-layout {
       box-sizing: border-box;
       display: grid;
-      grid-template-columns: minmax(0, 1fr) clamp(14rem, 15vw, 19rem) !important;
-      gap: clamp(1.75rem, 2.5vw, 3rem) !important;
+      grid-template-columns: minmax(0, 1fr) var(--la-page-toc-width) !important;
+      gap: var(--la-content-gap) !important;
       width: 100% !important;
       max-width: 100% !important;
       overflow-x: clip;
@@ -50,7 +77,7 @@ layout: table_wrappers
 
     .la-page-toc {
       min-width: 0 !important;
-      max-width: 19rem !important;
+      max-width: var(--la-page-toc-width) !important;
     }
   }
 </style>
