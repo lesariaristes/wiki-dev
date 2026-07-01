@@ -1,0 +1,103 @@
+<aside class="la-page-toc" aria-label="Navigation dans la page">
+  <div class="la-page-toc__title">Dans cette page</div>
+  <nav class="la-page-toc__nav"></nav>
+</aside>
+
+<script>
+  (function () {
+    function slugify(value) {
+      return value
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[^a-z0-9\s-]/g, "")
+        .trim()
+        .replace(/\s+/g, "-");
+    }
+
+    function headingText(heading) {
+      return Array.from(heading.childNodes)
+        .filter(function (node) {
+          return !(node.nodeType === 1 && node.classList.contains("anchor-heading"));
+        })
+        .map(function (node) {
+          return node.textContent || "";
+        })
+        .join("")
+        .trim();
+    }
+
+    function buildPageToc() {
+      const toc = document.querySelector(".la-page-toc");
+      const nav = document.querySelector(".la-page-toc__nav");
+      const headings = Array.from(document.querySelectorAll("#main-content main h2, #main-content main h3"))
+        .filter(function (heading) {
+          return !heading.classList.contains("no_toc") && headingText(heading).length > 0;
+        });
+
+      if (!toc || !nav || headings.length < 2) {
+        if (toc) {
+          toc.hidden = true;
+        }
+        return;
+      }
+
+      const list = document.createElement("ol");
+      list.className = "la-page-toc__list";
+
+      headings.forEach(function (heading, index) {
+        if (!heading.id) {
+          heading.id = slugify(headingText(heading)) || "section-" + index;
+        }
+
+        const item = document.createElement("li");
+        item.className = "la-page-toc__item la-page-toc__item--" + heading.tagName.toLowerCase();
+
+        const link = document.createElement("a");
+        link.href = "#" + heading.id;
+        link.textContent = headingText(heading);
+        link.className = "la-page-toc__link";
+
+        item.appendChild(link);
+        list.appendChild(item);
+      });
+
+      nav.appendChild(list);
+
+      const links = Array.from(document.querySelectorAll(".la-page-toc__link"));
+      const byId = new Map(links.map(function (link) {
+        return [decodeURIComponent(link.hash.substring(1)), link];
+      }));
+
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) {
+            return;
+          }
+
+          links.forEach(function (link) {
+            link.classList.remove("is-active");
+          });
+
+          const active = byId.get(entry.target.id);
+          if (active) {
+            active.classList.add("is-active");
+          }
+        });
+      }, {
+        rootMargin: "-20% 0px -65% 0px",
+        threshold: 0.01
+      });
+
+      headings.forEach(function (heading) {
+        observer.observe(heading);
+      });
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", buildPageToc);
+    } else {
+      buildPageToc();
+    }
+  })();
+</script>
