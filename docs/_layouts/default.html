@@ -6,6 +6,58 @@ layout: table_wrappers
 
 <html lang="{{ site.lang | default: 'en-US' }}">
 {% include head.html %}
+<style>
+  @media (min-width: 66.5rem) {
+    body {
+      overflow-x: hidden;
+    }
+
+    .main {
+      width: auto !important;
+      max-width: none !important;
+    }
+
+    .main-header {
+      width: auto !important;
+      max-width: none !important;
+    }
+
+    .main-content-wrap.la-main-content-wrap {
+      box-sizing: border-box;
+      width: 100% !important;
+      max-width: none !important;
+      margin: 0 !important;
+      padding-left: clamp(2rem, 3vw, 4rem) !important;
+      padding-right: clamp(2rem, 3vw, 4rem) !important;
+    }
+
+    .la-page-layout {
+      box-sizing: border-box;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) clamp(14rem, 15vw, 19rem) !important;
+      gap: clamp(1.75rem, 3vw, 3rem) !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      overflow-x: clip;
+    }
+
+    .la-page-layout--no-toc {
+      display: block;
+    }
+
+    .la-page-layout .main-content,
+    .la-page-layout .main-content main {
+      width: 100% !important;
+      max-width: none !important;
+      min-width: 0 !important;
+    }
+
+    .la-page-toc {
+      min-width: 0 !important;
+      max-width: 19rem !important;
+    }
+  }
+</style>
 <body>
   <a class="skip-to-main" href="#main-content">Skip to main content</a>
   {% include icons/icons.html %}
