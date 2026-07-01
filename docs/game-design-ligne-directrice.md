@@ -9,7 +9,7 @@ permalink: /docs/game-design-ligne-directrice/
 # Game Design - Ligne directrice
 {: .no_toc }
 
-Document de cadrage pour définir l'identité gameplay du shard **Les Ariaristes / Shattered Isles Rising**, prioriser les fonctionnalités, séquencer les travaux et fournir une base commune au staff pour créer les futurs projets d'implémentation et les tâches techniques associées.
+Document de cadrage pour définir l'identité gameplay du shard UO Francophone **Les Ariaristes**, prioriser les fonctionnalités, séquencer les travaux et fournir une base commune au staff pour créer les futurs projets d'implémentation et les tâches techniques associées.
 
 <details open markdown="block">
   <summary>Sommaire</summary>
