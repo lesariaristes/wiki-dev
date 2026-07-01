@@ -6,6 +6,8 @@ remote_theme: just-the-docs/just-the-docs
 search_enabled: true
 color_scheme: dark
 
+footer_content: "Dernière modification le 01 Juillet 2026 par sirchojin"
+
 aux_links:
   "Repository GitHub":
     - "https://github.com/lesariaristes/wiki-dev"
