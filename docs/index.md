@@ -14,7 +14,6 @@ Ce wiki documente à la fois les mécanismes de jeu en cours de construction et 
 ## Mécaniques de jeu
 
 - [Game Design - Ligne directrice](game-design-ligne-directrice/)
-- [Game Design - Systèmes complémentaires](game-design-systemes-complementaires/)
 - [Shattered Isles et monde vivant](mecaniques/monde-vivant/)
 - [Factions](mecaniques/factions/)
 - [Villes et citoyenneté](mecaniques/villes/)
